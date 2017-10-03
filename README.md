@@ -1,7 +1,5 @@
 # cogs542
-combinators and cognition
-
-<title> METU COGS 542: Grammars, Combinators and Cognition</title>
+METU COGS 542: Grammars, Combinators and Cognition
 
 <p><b>WHERE:</b> Middle East Technical University (METU/ODTU), Informatics Institute, Cognitive Science Department
 
@@ -13,7 +11,7 @@ combinators and cognition
 <b>CATALOG DESCRIPTION: </b> Combinators and their syntax-semantics. Combinators and the lexicon. Morphology and grammar. Parsing and language acquisition. Syntactic analyses of various phenomena using combinators. Codeterminism in syntax and semantics. Combinators and serializable knowledge.
 
 <p>
-<b>LECTURER: </b> Cem Bozsahin (Fall 2016)
+<b>LECTURER: </b> Cem Bozsahin (Fall 2017)
 <p><b>TA:</b> none
 <p>
 <b>BACKGROUND REQUIREMENTS:</b> Basic understanding of formal languages, logic, automata and linguistics, at the level of COGS501 and COGS502. 
