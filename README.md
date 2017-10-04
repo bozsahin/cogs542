@@ -12,6 +12,10 @@ METU COGS 542: Grammars, Combinators and Cognition
 
 <p>
 <b>LECTURER: </b> Cem Bozsahin (Fall 2017)
+       
+Room B-209, phone: 210 7758
+Office hours: open door policy except lecture days (currently W/Th)
+
 <p><b>TA:</b> none.
 <p><b>DISCUSSION</b>: Online in class (required), offline in newsgroup (highly recommended, and used for deciding grades):
        
