@@ -51,12 +51,12 @@ COURSE OUTLINE: </b>
 <p>
 <b>REFERENCE MATERIAL: </b>
 <ul> 
-<li><b>Steedman, M. (2016). CCG: An introduction. 2016. forthcoming</b>
+<li><b>Steedman, M. (2018). CCG: An introduction. forthcoming</b>
 <li><b>Ghallab, Nau and Traverso (2016). Automated planning and acting. CUP</b>            
 <li><b>Steedman, M. (2000). Plans, affordances and combinatory grammar. Linguistics and Philosophy.</b>
 <li> Bozsahin, C. (2016). Natural recursion doesn't work that way:
 automata in planning and syntax. In Fundamental Issues of AI. Vincent Muller (ed.) Springer.
-<li> Bozsahin, C. (2016). CCGlab manual. Lisbon and Ankara.
+<li> Bozsahin, C. (2017). CCGlab manual. Lisbon and Ankara.
 <li>Bozsahin, C. (2012). Combinatory Linguistics. Berlin/Boston: Mouton.
 <li>Steedman, M., J. Baldridge (2011). CCG. In Non-transformational syntax. Borsley and Borjars (eds.). Blackwell. 
 <li> Zettlemoyer, L., M. Collins (2005). Learning to map sentences to logical form. 21st Conf on Uncertainty in AI. AAAI Meeting, Edinburgh.
