@@ -40,7 +40,7 @@ COURSE OUTLINE: </b>
 <p>
 <b>REFERENCE MATERIAL: </b>
 <ul> 
-<li><b>Steedman, M. (2016). CCG: An introduction. 2016.</b>
+<li><b>Steedman, M. (2016). CCG: An introduction. 2016. forthcoming</b>
        <li><b>Ghallab, Nau and Traverso (2016). Automated planning and acting. CUP</b>            
 <li> Bozsahin, C. (2016). Natural recursion doesn't work that way:
 automata in planning and syntax. In Fundamental Issues of AI. Vincent Muller (ed.) Springer.
