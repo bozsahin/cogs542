@@ -17,7 +17,7 @@ Room B-209, phone: 210 7758
 
 Office hours: open door policy except lecture days (currently W/Th)
 
-Lecture room: S04.
+Lecture room and hours: S04  W 14.40-17.30
 
 <p><b>TA:</b> none.
 <p><b>DISCUSSION</b>: Online in class (required), offline in newsgroup (highly recommended, and used for deciding grades):
