@@ -63,11 +63,11 @@ COURSE OUTLINE: </b>
 <p>
 <b>REFERENCE MATERIAL: </b>
 <ul>
-<li>Ahmet Ustun (2017). Probabilistic Learning of Turkish morphosemantics by latent syntax
+<li>Ahmet Ustun (2017). Probabilistic Learning of Turkish morphosemantics by latent syntax (MS Thesis)
 <li>Piantadosi, Steven (2016). The computational origin of representation and conceptual change            
 <li>Steedman, M. (2000). Plans, affordances and combinatory grammar. Linguistics and Philosophy.
-<li>Bozsahin, C. (2017). CCGlab manual. Lisbon and Ankara.
-<li>Yoav Artzi and Luke Zettlemoyer (2013). Weakly Supervised Learning of Semantic Parsers for Mapping Instructions to Actions.
+<li>Bozsahin, C. (2017). CCGlab manual.
+<li>Yoav Artzi and Luke Zettlemoyer (2013). Weakly Supervised Learning of Semantic Parsers for Mapping Instructions to Actions. TACL.
 <li>Bozsahin, C. (2012). Combinatory Linguistics. Berlin/Boston: Mouton.
 <li>Steedman, M., J. Baldridge (2011). CCG. In Non-transformational syntax. Borsley and Borjars (eds.). Blackwell. 
 <li>Zettlemoyer, L., M. Collins (2005). Learning to map sentences to logical form. 21st Conf on Uncertainty in AI. AAAI Meeting, Edinburgh.
