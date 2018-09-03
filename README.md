@@ -38,7 +38,7 @@ This course is intended as a course in computing track of Cognitive Science. It 
 COURSE OUTLINE: </b>
 
 <ul> 
-<li>W1: Combinators and computing: What are combinators?
+<li>W1: Combinators and variable-free computing: What are combinators?
 <li>W2-7: Combinators and language
 <ul>
 <li>W2: Projective component of CCG
