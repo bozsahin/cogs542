@@ -47,11 +47,12 @@ COURSE OUTLINE: </b>
 <li>W5: Pieces of the projected component: which ones are observable?
 <li>W6: Learning the projected component's parameters
 <li>W7: Obtaining the projected component's items
+<li>W8: mid-term exam
 </ul>
-<li>W8-10: Combinators and mind
+<li>W9-11: Combinators and mind
 <ul>
-<li>W8: Planning
-<li>W9-10: Language of Thought
+<li>W9: Planning
+<li>W10-11: Language of Thought
 </ul>
 <li>W12-14: short presentations by students
 </ul>
