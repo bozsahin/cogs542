@@ -80,8 +80,8 @@ We will use <a href="https://github.com/bozsahin/ccglab">CCGlab</a>
 as the computational tool.
 
 <p>
-<b> NOTES:</b>
-<a href="pccg.pdf">Probabilistic CCG</a>: Syntax as a hidden variable problem
+<b> NOTES:</b> In this repo.
+       
 <p><b>COURSE CONDUCT: </b> 11 weeks of lecture and discussions. 3 weeks of research discussion including term presentations. Homework. 
 I don't use slides for this course, online or offline. So if you
 don't come to class, you're doomed.
