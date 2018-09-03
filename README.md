@@ -11,13 +11,13 @@ METU COGS 542: Grammars, Combinators and Cognition
 <b>CATALOG DESCRIPTION: </b> Combinators and their syntax-semantics. Combinators and the lexicon. Morphology and grammar. Parsing and language acquisition. Syntactic analyses of various phenomena using combinators. Codeterminism in syntax and semantics. Combinators and serializable knowledge.
 
 <p>
-<b>LECTURER: </b> Cem Bozsahin (Fall 2017)
+<b>LECTURER: </b> Cem Bozsahin (Fall 2018)
        
 Room B-209, phone: 210 7758
 
-Office hours: open door policy except lecture days (currently W/Th)
+Office hours: open door policy except lecture days (currently T/Th)
 
-Lecture room and hours: S04  W 14.40-17.30
+Lecture room and hours: TBA
 
 <p><b>TA:</b> none.
 <p><b>DISCUSSION</b>: Online in class (required), offline in newsgroup (highly recommended, and used for deciding grades):
@@ -38,11 +38,22 @@ This course is intended as a course in computing track of Cognitive Science. It 
 COURSE OUTLINE: </b>
 
 <ul> 
-<li>W1-W3: Combinators: meaning and sequencing.
-<li>W4-W6: CCG as a computational modeling framework. Probabilistic CCG.
-<li>W7-W9: CCG as a linguistic theory.
-<li>W10-W11: Combinators, plans, and scripts.
-<li>W12-W14: Student term presentations.
+<li>W1: What are combinators?
+<li>W2-7: Combinators and language
+<ul>
+<li>W2: Projective component of CCG
+<li>W3: Projected commponent of CCG
+<li>W4: Parsing and derivational structure
+<li>W5: Pieces of the projected component: which ones are observable?
+<li>W6: Learning the projected component's values
+<li>W7: Obtaining the projected component's items
+</ul>
+<li>W8-10: Combinators and mind
+<ul>
+<li>W8: planning
+<li>W9-10: Language of Thought
+</ul>
+<li>W12-14: short presentations by students
 </ul>
 
 <p>
