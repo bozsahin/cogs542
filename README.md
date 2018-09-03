@@ -57,6 +57,7 @@ COURSE OUTLINE: </b>
 <li>W12-14: short presentations by students
 </ul>
 
+NOTE: We may swap W5-7 and W9-11 so that you can choose term research topic asap.
 <p>
 
 
