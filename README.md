@@ -75,10 +75,12 @@ NOTE: We may swap W5-7 and W9-11 so that you can choose term research topic asap
 </ol>
 
 <p>
-<b> LINK:</b>
-We will use <a href="https://github.com/bozsahin/ccglab">CCGlab</a>
+<b> LINKS</b>:
+<ol>       
+<li> We will use <a href="https://github.com/bozsahin/ccglab">CCGlab</a>
 as the computational tool.
-<p>You can play with combinators in a stand-alone system: <a href="https://github.com/bozsahin/combinators-in-lisp">here</a>.
+<li>You can play with combinators in a stand-alone system: <a href="https://github.com/bozsahin/combinators-in-lisp">here</a>.
+</ol>
 
 <p>
 <b> NOTES:</b> In this repo.
