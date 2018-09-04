@@ -64,14 +64,14 @@ NOTE: We may swap W5-7 and W9-11 so that you can choose term research topic asap
 <p>
 <b>REFERENCE MATERIAL: </b>
 <ul>
+<li>Bozsahin, C. (2018). CCGlab manual.
 <li>Ahmet Ustun (2017). Probabilistic Learning of Turkish morphosemantics by latent syntax (MS Thesis)
 <li>Piantadosi, Steven (2016). The computational origin of representation and conceptual change            
-<li>Steedman, M. (2000). Plans, affordances and combinatory grammar. Linguistics and Philosophy.
-<li>Bozsahin, C. (2017). CCGlab manual.
-<li>Yoav Artzi and Luke Zettlemoyer (2013). Weakly Supervised Learning of Semantic Parsers for Mapping Instructions to Actions. TACL.
+<li> Kwiatkowski, T., Goldwater, S., Zettlemoyer, L., & Steedman, M. (2012). A probabilistic model of syntactic and semantic acquisition from child-directed utterances and their meanings. In Proceedings of the 13th EACL (pp. 234-244).
 <li>Bozsahin, C. (2012). Combinatory Linguistics. Berlin/Boston: Mouton.
 <li>Steedman, M., J. Baldridge (2011). CCG. In Non-transformational syntax. Borsley and Borjars (eds.). Blackwell. 
 <li>Zettlemoyer, L., M. Collins (2005). Learning to map sentences to logical form. 21st Conf on Uncertainty in AI. AAAI Meeting, Edinburgh.
+<li>Steedman, M. (2000). Plans, affordances and combinatory grammar. Linguistics and Philosophy.
 </ul>
 
 <p>
