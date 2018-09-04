@@ -63,7 +63,7 @@ NOTE: We may swap W5-7 and W9-11 so that you can choose term research topic asap
 
 <p>
 <b>REFERENCE MATERIAL: </b>
-<ul>
+<ol>
 <li>Bozsahin, C. (2018). CCGlab manual.
 <li>Ahmet Ustun (2017). Probabilistic Learning of Turkish morphosemantics by latent syntax (MS Thesis)
 <li>Piantadosi, Steven (2016). The computational origin of representation and conceptual change            
@@ -72,7 +72,7 @@ NOTE: We may swap W5-7 and W9-11 so that you can choose term research topic asap
 <li>Steedman, M., J. Baldridge (2011). CCG. In Non-transformational syntax. Borsley and Borjars (eds.). Blackwell. 
 <li>Zettlemoyer, L., M. Collins (2005). Learning to map sentences to logical form. 21st Conf on Uncertainty in AI. AAAI Meeting, Edinburgh.
 <li>Steedman, M. (2000). Plans, affordances and combinatory grammar. Linguistics and Philosophy.
-</ul>
+</ol>
 
 <p>
 <b> LINK:</b>
