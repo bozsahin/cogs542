@@ -88,4 +88,4 @@ as the computational tool.
 <p><b>COURSE CONDUCT: </b> 11 weeks of lecture and discussions. 3 weeks of research discussion including term presentations. Homework. 
 I rarely use slides for this course. So if you
 don't come to class, you're doomed.
-<p><b>GRADING: </b>Mid-term exam (<b> November 20, 2018, in class</b>), final, 5 HW, presentation, term report. 20% each.
+<p><b>GRADING: </b>Mid-term exam (<b> November 20, 2018, in class</b>), final, 5 HW, presentation, term research (no report). 20% each.
