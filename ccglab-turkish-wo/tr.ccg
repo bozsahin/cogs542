@@ -1,0 +1,13 @@
+% a mini grammar for testing wo categories for Turkish
+% -cem bozsahin
+
+cocuk n := s/(s\np[case=nom]): \p.p !child;
+cocuk n := s\(s\np[case=nom]): \p.!rheme  (p (!backg !child));
+kitabi n := (s\np[case=nom])/((s\np[case=nom])\bs\np[case=acc]): \p. p !book;
+kitabi n := s\(s\np[case=acc]): \p.!rheme (p (!backg !book));
+okudu v := s\np[case=nom]\np[case=acc] : \x\y.!read x y;
+okudu v := s\np[case=acc]\np[case=nom] : \x\y.!read y x;
+okudu v := s/np[case=nom]\np[case=acc] : \x\y.!read x y;
+okudu v := s\np[case=nom]/np[case=acc] : \x\y.!read x y;
+okudu v := s/np[case=acc]/np[case=nom] : \x\y.!read y x;
+okudu v := s/np[case=nom]/np[case=acc] : \x\y.!read x y;
