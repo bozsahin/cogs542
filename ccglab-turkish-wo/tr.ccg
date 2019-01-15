@@ -5,7 +5,7 @@ cocuk n := np: !child;
 cocuk n := s/(s\np[case=nom]): \p.p !child;
 cocuk n := s\(s\np[case=nom]): \p.p (!bg !child);
 kitabi n := np: !book;
-kitabi n := (s\np[case=nom])/((s\np[case=nom])\bs\np[case=acc]): \p. p !book;
+kitabi n := (s\np[case=nom])/((s\np[case=nom])\np[case=acc]): \p. p !book;
 kitabi n := s\(s\np[case=acc]): \p.p (!bg !book);
 kitabi n := s/(s\np[case=acc]): \p.p (!fg !book);
 
