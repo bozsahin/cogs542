@@ -11,7 +11,7 @@ METU COGS 542: Grammars, Combinators and Cognition
 <b>CATALOG DESCRIPTION: </b> Combinators and their syntax-semantics. Combinators and the lexicon. Morphology and grammar. Parsing and language acquisition. Syntactic analyses of various phenomena using combinators. Codeterminism in syntax and semantics. Combinators and serializable knowledge.
 
 <p>
-<b>LECTURER: </b> Cem Bozsahin (Fall 2018)
+<b>LECTURER: </b> Cem Bozsahin (Fall 2019)
        
 Room B-209, phone: 210 7758
 
@@ -88,4 +88,4 @@ as the computational tool.
 <p><b>COURSE CONDUCT: </b> 11 weeks of lecture and discussions. 3 weeks of research discussion including term presentations. Homework. 
 I rarely use slides for this course. So if you
 don't come to class, you're doomed.
-<p><b>GRADING: </b>Mid-term exam (<b> November 20, 2018, in class</b>), final, 5 HW, presentation, term research (no report). 20% each.
+<p><b>GRADING: </b>Mid-term exam (<b> TBA, in class</b>), final, 5 HW, presentation, term research (no report). 20% each.
