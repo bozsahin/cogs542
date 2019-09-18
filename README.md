@@ -64,7 +64,7 @@ NOTE: We may swap W5-7 and W9-11 so that you can choose term research topic asap
 <p>
 <b>REFERENCE MATERIAL: </b>
 <ol>
-<li>Bozsahin, C. (2018). CCGlab manual.
+<li>Bozsahin, C. (2019). CCGlab manual.
 <li>Ahmet Ustun (2017). Probabilistic Learning of Turkish morphosemantics by latent syntax (MS Thesis). METU Cogsci.
 <li>Piantadosi, Steven (2016). The computational origin of representation and conceptual change. ms., MIT.           
 <li> Kwiatkowski, T., Goldwater, S., Zettlemoyer, L., & Steedman, M. (2012). A probabilistic model of syntactic and semantic acquisition from child-directed utterances and their meanings. In Proceedings of the 13th EACL (pp. 234-244).
