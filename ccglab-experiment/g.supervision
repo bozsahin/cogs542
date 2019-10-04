@@ -1,0 +1,3 @@
+john cut the block on the box on the table: !on (!def (\x. !table x)) (!cut (!def (\y. !and (!block y) (!on (!def (\z. !box z)) y))) !john);
+john put the block on the box on the table: !put (!def (\x. !table x)) (!def (\y. !and (!block y)(!on (!def (\z.!box z)) y))) !john;
+put : \x\y\z.!put x y z;

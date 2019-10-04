@@ -1,0 +1,13 @@
+% an experimental grammar for training on adjunction v complementation
+
+john n  := s/(s\np): \p.p !john;
+put v   := (s\np)/pp[h=on]/np: \x\y\z.!put y x z;
+cut v   := (s\np)/np : \x\y.!cut x y;
+the d   := np/*n : \x.!def x;
+block n := n: \x.!block x;
+table n := n:\x.!table x;
+box   n := n:\x.!box x;
+on p    := ((s\np)\(s\np))/np: \x\p\y.!on x (p y);  % this is PP as a VP modifier
+on p    := (n\n)/np: \q\p\x.!and(p x)(!on q x);     % this is PP as an N modifier
+on p    := ((s\np)\((s\np)/pp[h=on]))/np: \x\p.p x; % this is PP as an argument
+

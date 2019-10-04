@@ -1,0 +1,1195 @@
+
+> (p '(john put the block on the box on the table))
+
+T
+> (ders)
+
+
+Derivation 1
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<     (BOX)(ON THE TABLE) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X)) (LAM X (TABLE X))))
+           (LAM X (BOX X)))
+>     (THE)(BOX ON THE TABLE) := NP
+        : ((LAM X (DEF X))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (LAM X (BOX X))))
+>     (ON)(THE BOX ON THE TABLE) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (TABLE X))))
+             (LAM X (BOX X)))))
+<     (BLOCK)(ON THE BOX ON THE TABLE) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X))
+             (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+               ((LAM X (DEF X)) (LAM X (TABLE X))))
+              (LAM X (BOX X)))))
+           (LAM X (BLOCK X)))
+>     (THE)(BLOCK ON THE BOX ON THE TABLE) := NP
+        : ((LAM X (DEF X))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X))
+              (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                ((LAM X (DEF X)) (LAM X (TABLE X))))
+               (LAM X (BOX X)))))
+            (LAM X (BLOCK X))))
+>     (PUT)(THE BLOCK ON THE BOX ON THE TABLE) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X))
+               (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                 ((LAM X (DEF X)) (LAM X (TABLE X))))
+                (LAM X (BOX X)))))
+             (LAM X (BLOCK X)))))
+>B    (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S/PP
+        : (LAM X
+           ((LAM P (P JOHN))
+            (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+              ((LAM X (DEF X))
+               (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                 ((LAM X (DEF X))
+                  (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                    ((LAM X (DEF X)) (LAM X (TABLE X))))
+                   (LAM X (BOX X)))))
+                (LAM X (BLOCK X)))))
+             X)))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X
+     (((PUT X)
+       (DEF
+        (LAM X
+         ((AND (BLOCK X))
+          ((ON (DEF (LAM X ((AND (BOX X)) ((ON (DEF (LAM X (TABLE X)))) X)))))
+           X)))))
+      JOHN)) =
+    (\ X . PUT X
+     (DEF
+      (\ X . AND (BLOCK X)
+       (ON (DEF (\ X . AND (BOX X) (ON (DEF (\ X . TABLE X)) X))) X)))
+     JOHN)
+
+Derivation 2
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (BOX X))))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<B    (ON THE BOX)(ON THE TABLE) := N\N
+        : (LAM X
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (BOX X))))
+             X)))
+<     (BLOCK)(ON THE BOX ON THE TABLE) := N
+        : ((LAM X
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (TABLE X))))
+             (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+               ((LAM X (DEF X)) (LAM X (BOX X))))
+              X)))
+           (LAM X (BLOCK X)))
+>     (THE)(BLOCK ON THE BOX ON THE TABLE) := NP
+        : ((LAM X (DEF X))
+           ((LAM X
+             (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+               ((LAM X (DEF X)) (LAM X (TABLE X))))
+              (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                ((LAM X (DEF X)) (LAM X (BOX X))))
+               X)))
+            (LAM X (BLOCK X))))
+>     (PUT)(THE BLOCK ON THE BOX ON THE TABLE) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X))
+            ((LAM X
+              (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                ((LAM X (DEF X)) (LAM X (TABLE X))))
+               (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                 ((LAM X (DEF X)) (LAM X (BOX X))))
+                X)))
+             (LAM X (BLOCK X)))))
+>B    (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S/PP
+        : (LAM X
+           ((LAM P (P JOHN))
+            (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+              ((LAM X (DEF X))
+               ((LAM X
+                 (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                   ((LAM X (DEF X)) (LAM X (TABLE X))))
+                  (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                    ((LAM X (DEF X)) (LAM X (BOX X))))
+                   X)))
+                (LAM X (BLOCK X)))))
+             X)))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X
+     (((PUT X)
+       (DEF
+        (LAM X
+         ((AND ((AND (BLOCK X)) ((ON (DEF (LAM X (BOX X)))) X)))
+          ((ON (DEF (LAM X (TABLE X)))) X)))))
+      JOHN)) =
+    (\ X . PUT X
+     (DEF
+      (\ X . AND (AND (BLOCK X) (ON (DEF (\ X . BOX X)) X))
+       (ON (DEF (\ X . TABLE X)) X)))
+     JOHN)
+
+Derivation 3
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (BOX X))))
+<     (BLOCK)(ON THE BOX) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X)) (LAM X (BOX X))))
+           (LAM X (BLOCK X)))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<     (BLOCK ON THE BOX)(ON THE TABLE) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X)) (LAM X (TABLE X))))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (BOX X))))
+            (LAM X (BLOCK X))))
+>     (THE)(BLOCK ON THE BOX ON THE TABLE) := NP
+        : ((LAM X (DEF X))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (BOX X))))
+             (LAM X (BLOCK X)))))
+>     (PUT)(THE BLOCK ON THE BOX ON THE TABLE) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (TABLE X))))
+             (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+               ((LAM X (DEF X)) (LAM X (BOX X))))
+              (LAM X (BLOCK X))))))
+>B    (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S/PP
+        : (LAM X
+           ((LAM P (P JOHN))
+            (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+              ((LAM X (DEF X))
+               (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                 ((LAM X (DEF X)) (LAM X (TABLE X))))
+                (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                  ((LAM X (DEF X)) (LAM X (BOX X))))
+                 (LAM X (BLOCK X))))))
+             X)))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X
+     (((PUT X)
+       (DEF
+        (LAM X
+         ((AND ((AND (BLOCK X)) ((ON (DEF (LAM X (BOX X)))) X)))
+          ((ON (DEF (LAM X (TABLE X)))) X)))))
+      JOHN)) =
+    (\ X . PUT X
+     (DEF
+      (\ X . AND (AND (BLOCK X) (ON (DEF (\ X . BOX X)) X))
+       (ON (DEF (\ X . TABLE X)) X)))
+     JOHN)
+
+Derivation 4
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+>     (THE)(BLOCK) := NP
+        : ((LAM X (DEF X)) (LAM X (BLOCK X)))
+>     (PUT)(THE BLOCK) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X)) (LAM X (BLOCK X))))
+LEX   (ON) := ((S\NP)\((S\NP)/PP))/NP
+        : (LAM X (LAM P (P X)))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<     (BOX)(ON THE TABLE) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X)) (LAM X (TABLE X))))
+           (LAM X (BOX X)))
+>     (THE)(BOX ON THE TABLE) := NP
+        : ((LAM X (DEF X))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (LAM X (BOX X))))
+>     (ON)(THE BOX ON THE TABLE) := (S\NP)\((S\NP)/PP)
+        : ((LAM X (LAM P (P X)))
+           ((LAM X (DEF X))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (TABLE X))))
+             (LAM X (BOX X)))))
+<     (PUT THE BLOCK)(ON THE BOX ON THE TABLE) := S\NP
+        : (((LAM X (LAM P (P X)))
+            ((LAM X (DEF X))
+             (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+               ((LAM X (DEF X)) (LAM X (TABLE X))))
+              (LAM X (BOX X)))))
+           ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+            ((LAM X (DEF X)) (LAM X (BLOCK X)))))
+>     (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S
+        : ((LAM P (P JOHN))
+           (((LAM X (LAM P (P X)))
+             ((LAM X (DEF X))
+              (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                ((LAM X (DEF X)) (LAM X (TABLE X))))
+               (LAM X (BOX X)))))
+            ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+             ((LAM X (DEF X)) (LAM X (BLOCK X))))))
+
+Final LF, normal-order evaluated: 
+
+    (((PUT (DEF (LAM X ((AND (BOX X)) ((ON (DEF (LAM X (TABLE X)))) X)))))
+      (DEF (LAM X (BLOCK X))))
+     JOHN) =
+    (PUT (DEF (\ X . AND (BOX X) (ON (DEF (\ X . TABLE X)) X)))
+     (DEF (\ X . BLOCK X)) JOHN)
+
+Derivation 5
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+>     (THE)(BLOCK) := NP
+        : ((LAM X (DEF X)) (LAM X (BLOCK X)))
+>     (PUT)(THE BLOCK) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X)) (LAM X (BLOCK X))))
+LEX   (ON) := ((S\NP)\(S\NP))/NP
+        : (LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<     (BOX)(ON THE TABLE) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X)) (LAM X (TABLE X))))
+           (LAM X (BOX X)))
+>     (THE)(BOX ON THE TABLE) := NP
+        : ((LAM X (DEF X))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (LAM X (BOX X))))
+>     (ON)(THE BOX ON THE TABLE) := (S\NP)\(S\NP)
+        : ((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+           ((LAM X (DEF X))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (TABLE X))))
+             (LAM X (BOX X)))))
+<Bx   (PUT THE BLOCK)(ON THE BOX ON THE TABLE) := (S\NP)/PP
+        : (LAM X
+           (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+             ((LAM X (DEF X))
+              (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                ((LAM X (DEF X)) (LAM X (TABLE X))))
+               (LAM X (BOX X)))))
+            (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+              ((LAM X (DEF X)) (LAM X (BLOCK X))))
+             X)))
+>B    (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S/PP
+        : (LAM X
+           ((LAM P (P JOHN))
+            ((LAM X
+              (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+                ((LAM X (DEF X))
+                 (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                   ((LAM X (DEF X)) (LAM X (TABLE X))))
+                  (LAM X (BOX X)))))
+               (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+                 ((LAM X (DEF X)) (LAM X (BLOCK X))))
+                X)))
+             X)))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X
+     ((ON (DEF (LAM X ((AND (BOX X)) ((ON (DEF (LAM X (TABLE X)))) X)))))
+      (((PUT X) (DEF (LAM X (BLOCK X)))) JOHN))) =
+    (\ X . ON (DEF (\ X . AND (BOX X) (ON (DEF (\ X . TABLE X)) X)))
+     (PUT X (DEF (\ X . BLOCK X)) JOHN))
+
+Derivation 6
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+>     (THE)(BLOCK) := NP
+        : ((LAM X (DEF X)) (LAM X (BLOCK X)))
+>     (PUT)(THE BLOCK) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X)) (LAM X (BLOCK X))))
+LEX   (ON) := ((S\NP)\((S\NP)/PP))/NP
+        : (LAM X (LAM P (P X)))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := (S\NP)\((S\NP)/PP)
+        : ((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (BOX X))))
+LEX   (ON) := ((S\NP)\(S\NP))/NP
+        : (LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := (S\NP)\(S\NP)
+        : ((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<B    (ON THE BOX)(ON THE TABLE) := (S\NP)\((S\NP)/PP)
+        : (LAM X
+           (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (BOX X)))) X)))
+<     (PUT THE BLOCK)(ON THE BOX ON THE TABLE) := S\NP
+        : ((LAM X
+            (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+              ((LAM X (DEF X)) (LAM X (TABLE X))))
+             (((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (BOX X)))) X)))
+           ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+            ((LAM X (DEF X)) (LAM X (BLOCK X)))))
+>     (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S
+        : ((LAM P (P JOHN))
+           ((LAM X
+             (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+               ((LAM X (DEF X)) (LAM X (TABLE X))))
+              (((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (BOX X)))) X)))
+            ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+             ((LAM X (DEF X)) (LAM X (BLOCK X))))))
+
+Final LF, normal-order evaluated: 
+
+    ((ON (DEF (LAM X (TABLE X))))
+     (((PUT (DEF (LAM X (BOX X)))) (DEF (LAM X (BLOCK X)))) JOHN)) =
+    (ON (DEF (\ X . TABLE X))
+     (PUT (DEF (\ X . BOX X)) (DEF (\ X . BLOCK X)) JOHN))
+
+Derivation 7
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+>     (THE)(BLOCK) := NP
+        : ((LAM X (DEF X)) (LAM X (BLOCK X)))
+>     (PUT)(THE BLOCK) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X)) (LAM X (BLOCK X))))
+LEX   (ON) := ((S\NP)\(S\NP))/NP
+        : (LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := (S\NP)\(S\NP)
+        : ((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+           ((LAM X (DEF X)) (LAM X (BOX X))))
+LEX   (ON) := ((S\NP)\(S\NP))/NP
+        : (LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := (S\NP)\(S\NP)
+        : ((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<B    (ON THE BOX)(ON THE TABLE) := (S\NP)\(S\NP)
+        : (LAM X
+           (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+              ((LAM X (DEF X)) (LAM X (BOX X))))
+             X)))
+<Bx   (PUT THE BLOCK)(ON THE BOX ON THE TABLE) := (S\NP)/PP
+        : (LAM X
+           ((LAM X
+             (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+               ((LAM X (DEF X)) (LAM X (TABLE X))))
+              (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+                ((LAM X (DEF X)) (LAM X (BOX X))))
+               X)))
+            (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+              ((LAM X (DEF X)) (LAM X (BLOCK X))))
+             X)))
+>B    (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S/PP
+        : (LAM X
+           ((LAM P (P JOHN))
+            ((LAM X
+              ((LAM X
+                (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+                  ((LAM X (DEF X)) (LAM X (TABLE X))))
+                 (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+                   ((LAM X (DEF X)) (LAM X (BOX X))))
+                  X)))
+               (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+                 ((LAM X (DEF X)) (LAM X (BLOCK X))))
+                X)))
+             X)))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X
+     ((ON (DEF (LAM X (TABLE X))))
+      ((ON (DEF (LAM X (BOX X)))) (((PUT X) (DEF (LAM X (BLOCK X)))) JOHN)))) =
+    (\ X . ON (DEF (\ X . TABLE X))
+     (ON (DEF (\ X . BOX X)) (PUT X (DEF (\ X . BLOCK X)) JOHN)))
+
+Derivation 8
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (BOX X))))
+<     (BLOCK)(ON THE BOX) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X)) (LAM X (BOX X))))
+           (LAM X (BLOCK X)))
+>     (THE)(BLOCK ON THE BOX) := NP
+        : ((LAM X (DEF X))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (BOX X))))
+            (LAM X (BLOCK X))))
+>     (PUT)(THE BLOCK ON THE BOX) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (BOX X))))
+             (LAM X (BLOCK X)))))
+LEX   (ON) := ((S\NP)\((S\NP)/PP))/NP
+        : (LAM X (LAM P (P X)))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := (S\NP)\((S\NP)/PP)
+        : ((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (TABLE X))))
+<     (PUT THE BLOCK ON THE BOX)(ON THE TABLE) := S\NP
+        : (((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (TABLE X))))
+           ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+            ((LAM X (DEF X))
+             (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+               ((LAM X (DEF X)) (LAM X (BOX X))))
+              (LAM X (BLOCK X))))))
+>     (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S
+        : ((LAM P (P JOHN))
+           (((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (TABLE X))))
+            ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+             ((LAM X (DEF X))
+              (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                ((LAM X (DEF X)) (LAM X (BOX X))))
+               (LAM X (BLOCK X)))))))
+
+Final LF, normal-order evaluated: 
+
+    (((PUT (DEF (LAM X (TABLE X))))
+      (DEF (LAM X ((AND (BLOCK X)) ((ON (DEF (LAM X (BOX X)))) X)))))
+     JOHN) =
+    (PUT (DEF (\ X . TABLE X))
+     (DEF (\ X . AND (BLOCK X) (ON (DEF (\ X . BOX X)) X))) JOHN)
+
+Derivation 9
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (BOX X))))
+<     (BLOCK)(ON THE BOX) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X)) (LAM X (BOX X))))
+           (LAM X (BLOCK X)))
+>     (THE)(BLOCK ON THE BOX) := NP
+        : ((LAM X (DEF X))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (BOX X))))
+            (LAM X (BLOCK X))))
+>     (PUT)(THE BLOCK ON THE BOX) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (BOX X))))
+             (LAM X (BLOCK X)))))
+LEX   (ON) := ((S\NP)\(S\NP))/NP
+        : (LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := (S\NP)\(S\NP)
+        : ((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<Bx   (PUT THE BLOCK ON THE BOX)(ON THE TABLE) := (S\NP)/PP
+        : (LAM X
+           (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+              ((LAM X (DEF X))
+               (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                 ((LAM X (DEF X)) (LAM X (BOX X))))
+                (LAM X (BLOCK X)))))
+             X)))
+>B    (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S/PP
+        : (LAM X
+           ((LAM P (P JOHN))
+            ((LAM X
+              (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+                ((LAM X (DEF X)) (LAM X (TABLE X))))
+               (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+                 ((LAM X (DEF X))
+                  (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                    ((LAM X (DEF X)) (LAM X (BOX X))))
+                   (LAM X (BLOCK X)))))
+                X)))
+             X)))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X
+     ((ON (DEF (LAM X (TABLE X))))
+      (((PUT X) (DEF (LAM X ((AND (BLOCK X)) ((ON (DEF (LAM X (BOX X)))) X)))))
+       JOHN))) =
+    (\ X . ON (DEF (\ X . TABLE X))
+     (PUT X (DEF (\ X . AND (BLOCK X) (ON (DEF (\ X . BOX X)) X))) JOHN))
+
+Derivation 10
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+>     (THE)(BLOCK) := NP
+        : ((LAM X (DEF X)) (LAM X (BLOCK X)))
+>     (PUT)(THE BLOCK) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X)) (LAM X (BLOCK X))))
+LEX   (ON) := ((S\NP)\((S\NP)/PP))/NP
+        : (LAM X (LAM P (P X)))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := (S\NP)\((S\NP)/PP)
+        : ((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (BOX X))))
+<     (PUT THE BLOCK)(ON THE BOX) := S\NP
+        : (((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (BOX X))))
+           ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+            ((LAM X (DEF X)) (LAM X (BLOCK X)))))
+LEX   (ON) := ((S\NP)\(S\NP))/NP
+        : (LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := (S\NP)\(S\NP)
+        : ((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<     (PUT THE BLOCK ON THE BOX)(ON THE TABLE) := S\NP
+        : (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+            ((LAM X (DEF X)) (LAM X (TABLE X))))
+           (((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (BOX X))))
+            ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+             ((LAM X (DEF X)) (LAM X (BLOCK X))))))
+>     (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S
+        : ((LAM P (P JOHN))
+           (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (BOX X))))
+             ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+              ((LAM X (DEF X)) (LAM X (BLOCK X)))))))
+
+Final LF, normal-order evaluated: 
+
+    ((ON (DEF (LAM X (TABLE X))))
+     (((PUT (DEF (LAM X (BOX X)))) (DEF (LAM X (BLOCK X)))) JOHN)) =
+    (ON (DEF (\ X . TABLE X))
+     (PUT (DEF (\ X . BOX X)) (DEF (\ X . BLOCK X)) JOHN))
+
+Derivation 11
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+>     (THE)(BLOCK) := NP
+        : ((LAM X (DEF X)) (LAM X (BLOCK X)))
+>     (PUT)(THE BLOCK) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X)) (LAM X (BLOCK X))))
+LEX   (ON) := ((S\NP)\(S\NP))/NP
+        : (LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := (S\NP)\(S\NP)
+        : ((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+           ((LAM X (DEF X)) (LAM X (BOX X))))
+<Bx   (PUT THE BLOCK)(ON THE BOX) := (S\NP)/PP
+        : (LAM X
+           (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+             ((LAM X (DEF X)) (LAM X (BOX X))))
+            (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+              ((LAM X (DEF X)) (LAM X (BLOCK X))))
+             X)))
+LEX   (ON) := ((S\NP)\((S\NP)/PP))/NP
+        : (LAM X (LAM P (P X)))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := (S\NP)\((S\NP)/PP)
+        : ((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (TABLE X))))
+<     (PUT THE BLOCK ON THE BOX)(ON THE TABLE) := S\NP
+        : (((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (TABLE X))))
+           (LAM X
+            (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+              ((LAM X (DEF X)) (LAM X (BOX X))))
+             (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+               ((LAM X (DEF X)) (LAM X (BLOCK X))))
+              X))))
+>     (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S
+        : ((LAM P (P JOHN))
+           (((LAM X (LAM P (P X))) ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (LAM X
+             (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+               ((LAM X (DEF X)) (LAM X (BOX X))))
+              (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+                ((LAM X (DEF X)) (LAM X (BLOCK X))))
+               X)))))
+
+Final LF, normal-order evaluated: 
+
+    ((ON (DEF (LAM X (BOX X))))
+     (((PUT (DEF (LAM X (TABLE X)))) (DEF (LAM X (BLOCK X)))) JOHN)) =
+    (ON (DEF (\ X . BOX X))
+     (PUT (DEF (\ X . TABLE X)) (DEF (\ X . BLOCK X)) JOHN))
+
+Derivation 12
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+>     (THE)(BLOCK) := NP
+        : ((LAM X (DEF X)) (LAM X (BLOCK X)))
+>     (PUT)(THE BLOCK) := (S\NP)/PP
+        : ((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+           ((LAM X (DEF X)) (LAM X (BLOCK X))))
+LEX   (ON) := ((S\NP)\(S\NP))/NP
+        : (LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := (S\NP)\(S\NP)
+        : ((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+           ((LAM X (DEF X)) (LAM X (BOX X))))
+<Bx   (PUT THE BLOCK)(ON THE BOX) := (S\NP)/PP
+        : (LAM X
+           (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+             ((LAM X (DEF X)) (LAM X (BOX X))))
+            (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+              ((LAM X (DEF X)) (LAM X (BLOCK X))))
+             X)))
+LEX   (ON) := ((S\NP)\(S\NP))/NP
+        : (LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := (S\NP)\(S\NP)
+        : ((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<Bx   (PUT THE BLOCK ON THE BOX)(ON THE TABLE) := (S\NP)/PP
+        : (LAM X
+           (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            ((LAM X
+              (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+                ((LAM X (DEF X)) (LAM X (BOX X))))
+               (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+                 ((LAM X (DEF X)) (LAM X (BLOCK X))))
+                X)))
+             X)))
+>B    (JOHN)(PUT THE BLOCK ON THE BOX ON THE TABLE) := S/PP
+        : (LAM X
+           ((LAM P (P JOHN))
+            ((LAM X
+              (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+                ((LAM X (DEF X)) (LAM X (TABLE X))))
+               ((LAM X
+                 (((LAM X (LAM P (LAM Y ((ON X) (P Y)))))
+                   ((LAM X (DEF X)) (LAM X (BOX X))))
+                  (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+                    ((LAM X (DEF X)) (LAM X (BLOCK X))))
+                   X)))
+                X)))
+             X)))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X
+     ((ON (DEF (LAM X (TABLE X))))
+      ((ON (DEF (LAM X (BOX X)))) (((PUT X) (DEF (LAM X (BLOCK X)))) JOHN)))) =
+    (\ X . ON (DEF (\ X . TABLE X))
+     (ON (DEF (\ X . BOX X)) (PUT X (DEF (\ X . BLOCK X)) JOHN)))
+
+Derivation 13
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+>B2   (JOHN)(PUT) := (S/PP)/NP
+        : (LAM X
+           (LAM Y
+            ((LAM P (P JOHN)) (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z)))) X) Y))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<     (BOX)(ON THE TABLE) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X)) (LAM X (TABLE X))))
+           (LAM X (BOX X)))
+>     (THE)(BOX ON THE TABLE) := NP
+        : ((LAM X (DEF X))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (LAM X (BOX X))))
+>     (ON)(THE BOX ON THE TABLE) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (TABLE X))))
+             (LAM X (BOX X)))))
+<     (BLOCK)(ON THE BOX ON THE TABLE) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X))
+             (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+               ((LAM X (DEF X)) (LAM X (TABLE X))))
+              (LAM X (BOX X)))))
+           (LAM X (BLOCK X)))
+>     (THE)(BLOCK ON THE BOX ON THE TABLE) := NP
+        : ((LAM X (DEF X))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X))
+              (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                ((LAM X (DEF X)) (LAM X (TABLE X))))
+               (LAM X (BOX X)))))
+            (LAM X (BLOCK X))))
+>     (JOHN PUT)(THE BLOCK ON THE BOX ON THE TABLE) := S/PP
+        : ((LAM X
+            (LAM Y
+             ((LAM P (P JOHN))
+              (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z)))) X) Y))))
+           ((LAM X (DEF X))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X))
+               (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                 ((LAM X (DEF X)) (LAM X (TABLE X))))
+                (LAM X (BOX X)))))
+             (LAM X (BLOCK X)))))
+
+Final LF, normal-order evaluated: 
+
+    (LAM Y
+     (((PUT Y)
+       (DEF
+        (LAM X
+         ((AND (BLOCK X))
+          ((ON (DEF (LAM X ((AND (BOX X)) ((ON (DEF (LAM X (TABLE X)))) X)))))
+           X)))))
+      JOHN)) =
+    (\ Y . PUT Y
+     (DEF
+      (\ X . AND (BLOCK X)
+       (ON (DEF (\ X . AND (BOX X) (ON (DEF (\ X . TABLE X)) X))) X)))
+     JOHN)
+
+Derivation 14
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+>B2   (JOHN)(PUT) := (S/PP)/NP
+        : (LAM X
+           (LAM Y
+            ((LAM P (P JOHN)) (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z)))) X) Y))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (BOX X))))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<B    (ON THE BOX)(ON THE TABLE) := N\N
+        : (LAM X
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (BOX X))))
+             X)))
+<     (BLOCK)(ON THE BOX ON THE TABLE) := N
+        : ((LAM X
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (TABLE X))))
+             (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+               ((LAM X (DEF X)) (LAM X (BOX X))))
+              X)))
+           (LAM X (BLOCK X)))
+>     (THE)(BLOCK ON THE BOX ON THE TABLE) := NP
+        : ((LAM X (DEF X))
+           ((LAM X
+             (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+               ((LAM X (DEF X)) (LAM X (TABLE X))))
+              (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                ((LAM X (DEF X)) (LAM X (BOX X))))
+               X)))
+            (LAM X (BLOCK X))))
+>     (JOHN PUT)(THE BLOCK ON THE BOX ON THE TABLE) := S/PP
+        : ((LAM X
+            (LAM Y
+             ((LAM P (P JOHN))
+              (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z)))) X) Y))))
+           ((LAM X (DEF X))
+            ((LAM X
+              (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                ((LAM X (DEF X)) (LAM X (TABLE X))))
+               (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+                 ((LAM X (DEF X)) (LAM X (BOX X))))
+                X)))
+             (LAM X (BLOCK X)))))
+
+Final LF, normal-order evaluated: 
+
+    (LAM Y
+     (((PUT Y)
+       (DEF
+        (LAM X
+         ((AND ((AND (BLOCK X)) ((ON (DEF (LAM X (BOX X)))) X)))
+          ((ON (DEF (LAM X (TABLE X)))) X)))))
+      JOHN)) =
+    (\ Y . PUT Y
+     (DEF
+      (\ X . AND (AND (BLOCK X) (ON (DEF (\ X . BOX X)) X))
+       (ON (DEF (\ X . TABLE X)) X)))
+     JOHN)
+
+Derivation 15
+--------------
+LEX   (JOHN) := S/(S\NP)
+        : (LAM P (P JOHN))
+LEX   (PUT) := ((S\NP)/PP)/NP
+        : (LAM X (LAM Y (LAM Z (((PUT Y) X) Z))))
+>B2   (JOHN)(PUT) := (S/PP)/NP
+        : (LAM X
+           (LAM Y
+            ((LAM P (P JOHN)) (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z)))) X) Y))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BLOCK) := N
+        : (LAM X (BLOCK X))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (BOX) := N
+        : (LAM X (BOX X))
+>     (THE)(BOX) := NP
+        : ((LAM X (DEF X)) (LAM X (BOX X)))
+>     (ON)(THE BOX) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (BOX X))))
+<     (BLOCK)(ON THE BOX) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X)) (LAM X (BOX X))))
+           (LAM X (BLOCK X)))
+LEX   (ON) := (N\N)/NP
+        : (LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TABLE) := N
+        : (LAM X (TABLE X))
+>     (THE)(TABLE) := NP
+        : ((LAM X (DEF X)) (LAM X (TABLE X)))
+>     (ON)(THE TABLE) := N\N
+        : ((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+           ((LAM X (DEF X)) (LAM X (TABLE X))))
+<     (BLOCK ON THE BOX)(ON THE TABLE) := N
+        : (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+            ((LAM X (DEF X)) (LAM X (TABLE X))))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (BOX X))))
+            (LAM X (BLOCK X))))
+>     (THE)(BLOCK ON THE BOX ON THE TABLE) := NP
+        : ((LAM X (DEF X))
+           (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+             ((LAM X (DEF X)) (LAM X (TABLE X))))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (BOX X))))
+             (LAM X (BLOCK X)))))
+>     (JOHN PUT)(THE BLOCK ON THE BOX ON THE TABLE) := S/PP
+        : ((LAM X
+            (LAM Y
+             ((LAM P (P JOHN))
+              (((LAM X (LAM Y (LAM Z (((PUT Y) X) Z)))) X) Y))))
+           ((LAM X (DEF X))
+            (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+              ((LAM X (DEF X)) (LAM X (TABLE X))))
+             (((LAM Q (LAM P (LAM X ((AND (P X)) ((ON Q) X)))))
+               ((LAM X (DEF X)) (LAM X (BOX X))))
+              (LAM X (BLOCK X))))))
+
+Final LF, normal-order evaluated: 
+
+    (LAM Y
+     (((PUT Y)
+       (DEF
+        (LAM X
+         ((AND ((AND (BLOCK X)) ((ON (DEF (LAM X (BOX X)))) X)))
+          ((ON (DEF (LAM X (TABLE X)))) X)))))
+      JOHN)) =
+    (\ Y . PUT Y
+     (DEF
+      (\ X . AND (AND (BLOCK X) (ON (DEF (\ X . BOX X)) X))
+       (ON (DEF (\ X . TABLE X)) X)))
+     JOHN)
+
+Try (cky-pprint) to see the details including the features and slash modalities.
+    (cky-reveal-cell <cell>) to pretty-print the parse in <cell>.
+NIL
+> (dribble)

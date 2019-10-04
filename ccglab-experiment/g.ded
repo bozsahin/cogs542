@@ -1,0 +1,47 @@
+(DEFPARAMETER *CCG-GRAMMAR*
+  '(((KEY 1) (PHON JOHN) (MORPH N)
+     (SYN
+      (((BCAT S) (FEATS NIL)) (DIR FS) (MODAL ALL)
+       (((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))))
+     (SEM (LAM P (P "JOHN"))) (PARAM 1.0))
+    ((KEY 2) (PHON PUT) (MORPH V)
+     (SYN
+      (((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+        (DIR FS) (MODAL ALL) ((BCAT PP) (FEATS ((H ON)))))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X (LAM Y (LAM Z ((("PUT" Y) X) Z))))) (PARAM 1.0))
+    ((KEY 3) (PHON CUT) (MORPH V)
+     (SYN
+      ((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X (LAM Y (("CUT" X) Y)))) (PARAM 1.0))
+    ((KEY 4) (PHON THE) (MORPH D)
+     (SYN
+      (((BCAT NP) (FEATS NIL)) (DIR FS) (MODAL STAR) ((BCAT N) (FEATS NIL))))
+     (SEM (LAM X ("DEF" X))) (PARAM 1.0))
+    ((KEY 5) (PHON BLOCK) (MORPH N) (SYN ((BCAT N) (FEATS NIL)))
+     (SEM (LAM X ("BLOCK" X))) (PARAM 1.0))
+    ((KEY 6) (PHON TABLE) (MORPH N) (SYN ((BCAT N) (FEATS NIL)))
+     (SEM (LAM X ("TABLE" X))) (PARAM 1.0))
+    ((KEY 7) (PHON BOX) (MORPH N) (SYN ((BCAT N) (FEATS NIL)))
+     (SEM (LAM X ("BOX" X))) (PARAM 1.0))
+    ((KEY 8) (PHON ON) (MORPH P)
+     (SYN
+      (((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+        (DIR BS) (MODAL ALL)
+        (((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X (LAM P (LAM Y (("ON" X) (P Y)))))) (PARAM 1.0))
+    ((KEY 9) (PHON ON) (MORPH P)
+     (SYN
+      ((((BCAT N) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT N) (FEATS NIL)))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM Q (LAM P (LAM X (("AND" (P X)) (("ON" Q) X)))))) (PARAM 1.0))
+    ((KEY 10) (PHON ON) (MORPH P)
+     (SYN
+      (((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+        (DIR BS) (MODAL ALL)
+        ((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+         (DIR FS) (MODAL ALL) ((BCAT PP) (FEATS ((H ON))))))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X (LAM P (P X)))) (PARAM 1.0))))

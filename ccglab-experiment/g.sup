@@ -1,0 +1,11 @@
+(((JOHN CUT THE BLOCK ON THE BOX ON THE TABLE)
+  (("ON" ("DEF" (LAM X ("TABLE" X))))
+   (("CUT"
+     ("DEF"
+      (LAM Y (("AND" ("BLOCK" Y)) (("ON" ("DEF" (LAM Z ("BOX" Z)))) Y)))))
+    "JOHN")))
+ ((JOHN PUT THE BLOCK ON THE BOX ON THE TABLE)
+  ((("PUT" ("DEF" (LAM X ("TABLE" X))))
+    ("DEF" (LAM Y (("AND" ("BLOCK" Y)) (("ON" ("DEF" (LAM Z ("BOX" Z)))) Y)))))
+   "JOHN"))
+ ((PUT) (LAM X (LAM Y (LAM Z ((("PUT" X) Y) Z))))))
