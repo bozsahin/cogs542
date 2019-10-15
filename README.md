@@ -19,7 +19,8 @@ Office hours: open door policy except lecture days (currently T/Th)
 
 Lecture room and hours: S-03, Tuesdays 14.40-17.30
 
-<p><b>TA:</b> none.
+<p><b>TA:</b>  Alaz Aydin.
+       
 <p><b>DISCUSSION</b>: Online in class (required), offline in newsgroup (highly recommended, and used for deciding grades):
        
 [group](https://groups.google.com/forum/#!forum/metu-cogs-542)
