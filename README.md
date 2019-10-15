@@ -49,11 +49,11 @@ COURSE OUTLINE: </b>
 <li>W6: Learning the projected component's parameters
 <li>W7: Obtaining the projected component's items
 </ul>
-<li>W8: mid-term exam
-<li>W9-11: Combinators and mind
+<li>W10: mid-term exam
+<li>W8-11: Combinators and mind
 <ul>
-<li>W9: Planning
-<li>W10-11: Language of Thought
+<li> Planning
+<li>WLanguage of Thought
 </ul>
 <li>W12-14: short presentations by students
 </ul>
