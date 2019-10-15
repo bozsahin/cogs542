@@ -53,7 +53,7 @@ COURSE OUTLINE: </b>
 <li>W8-11: Combinators and mind
 <ul>
 <li> Planning
-<li>WLanguage of Thought
+<li> Language of Thought
 </ul>
 <li>W12-14: short presentations by students
 </ul>
