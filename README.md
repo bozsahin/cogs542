@@ -20,7 +20,7 @@ Online (no in-house lectures) phone: 210 7758
 
 Office hours: open door policy except lecture days (currently T/Th)
 
-Lecture room and hours: S-03, Tuesdays 14.40-17.30
+official Lecture hours:  Tuesdays 14.40-17.30 (no room allocation, due to online teaching).
 
 <p><b>TA:</b>  TBA.
        
