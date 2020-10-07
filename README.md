@@ -1,6 +1,9 @@
 # cogs542
 METU COGS 542: Grammars, Combinators and Cognition
 
+<b> The course is now online, thanks to C19. I put videos up in youtube, you watch them wherever and whenever you want, then we synch and discuss using zoom/webex at class time,
+or some mutually agreeable time.</b>
+
 <p><b>WHERE:</b> Middle East Technical University (METU/ODTU), Informatics Institute, Cognitive Science Department
 
 <p>
