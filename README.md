@@ -11,15 +11,15 @@ METU COGS 542: Grammars, Combinators and Cognition
 <b>CATALOG DESCRIPTION: </b> Combinators and their syntax-semantics. Combinators and the lexicon. Morphology and grammar. Parsing and language acquisition. Syntactic analyses of various phenomena using combinators. Codeterminism in syntax and semantics. Combinators and serializable knowledge.
 
 <p>
-<b>LECTURER: </b> Cem Bozsahin (Fall 2019)
+<b>LECTURER: </b> Cem Bozsahin (Fall 2020)
        
-Room B-209, phone: 210 7758
+Online (no in-house lectures) phone: 210 7758
 
 Office hours: open door policy except lecture days (currently T/Th)
 
 Lecture room and hours: S-03, Tuesdays 14.40-17.30
 
-<p><b>TA:</b>  Alaz Aydin.
+<p><b>TA:</b>  TBA.
        
 <p><b>DISCUSSION</b>: Online in class (required), offline in newsgroup (highly recommended, and used for deciding grades):
        
