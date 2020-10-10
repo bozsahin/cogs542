@@ -2,7 +2,7 @@
 METU COGS 542: Grammars, Combinators and Cognition
 
 <b> The course is now online, thanks to C19. I put videos up in youtube, you watch them wherever and whenever you want, then we synch and discuss using zoom/webex at class time,
-or some mutually agreeable time.</b>
+or some mutually agreeable time. Quizzes are naturally take-home in online teaching.</b>
 
 <p><b>WHERE:</b> Middle East Technical University (METU/ODTU), Informatics Institute, Cognitive Science Department
 
@@ -20,7 +20,7 @@ Online (no in-house lectures) phone: 210 7758
 
 Office hours: open door policy except lecture days (currently T/Th)
 
-official Lecture hours:  Tuesdays 14.40-17.30 (no room allocation, due to online teaching).
+official Lecture hours:  Tuesdays 14.40-17.30 (no room allocation, due to online teaching, this is our synch hour).
 
 <p><b>TA:</b>  TBA.
        
@@ -64,8 +64,7 @@ COURSE OUTLINE: </b>
 <p>
 <b>REFERENCE MATERIAL: </b>
 <ol>
-<li>Bozsahin, C. (2019). CCGlab manual.
-<li>Ahmet Ustun (2017). Probabilistic Learning of Turkish morphosemantics by latent syntax (MS Thesis). METU Cogsci.
+<li>Bozsahin, C. (2020). CCGlab manual.
 <li>Piantadosi, Steven (2016). The computational origin of representation and conceptual change. ms., MIT.           
 <li> Kwiatkowski, T., Goldwater, S., Zettlemoyer, L., & Steedman, M. (2012). A probabilistic model of syntactic and semantic acquisition from child-directed utterances and their meanings. In Proceedings of the 13th EACL (pp. 234-244).
 <li>Bozsahin, C. (2012). Combinatory Linguistics. Berlin/Boston: Mouton.
@@ -84,7 +83,7 @@ as the computational tool.
 <p>
 <b> NOTES:</b> In this repo.
        
-<p><b>COURSE CONDUCT: </b> 11 weeks of lecture and discussions. 3 weeks of research discussion including term presentations. Homework. Weekly quiz in class, in the beginning or end.
+<p><b>COURSE CONDUCT: </b> 11 weeks of lecture and discussions. 3 weeks of research discussion including term presentations. Homework. Weekly quiz.
 I rarely use slides for this course. So if you
 don't come to class, you're doomed.
 <p><b>GRADING: </b>Mid-term exam (<b> 26.11.2019, in class</b>. 20%), final 20%, 2 HW (total %15), term research (presentation, %15), weekly quiz (total %30, max. 10 counted).
