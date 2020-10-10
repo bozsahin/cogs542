@@ -16,7 +16,7 @@ or some mutually agreeable time. Quizzes are naturally take-home in online teach
 <p>
 <b>LECTURER: </b> Cem Bozsahin (Fall 2020)
        
-Online (no in-house lectures) phone: 210 7758
+Online (no in-house lectures) phone: 210 7758 (better use my email for contact)
 
 Office hours: open door policy except lecture days (currently T/Th)
 
@@ -24,7 +24,7 @@ official Lecture hours:  Tuesdays 14.40-17.30 (no room allocation, due to online
 
 <p><b>TA:</b>  TBA.
        
-<p><b>DISCUSSION</b>: Online in class (required), offline in newsgroup (highly recommended, and used for deciding grades):
+<p><b>DISCUSSION</b>: Online at synch points (required), offline in newsgroup (highly recommended, and used for deciding grades):
        
 [group](https://groups.google.com/forum/#!forum/metu-cogs-542)
 
@@ -86,4 +86,4 @@ as the computational tool.
 <p><b>COURSE CONDUCT: </b> 11 weeks of lecture and discussions. 3 weeks of research discussion including term presentations. Homework. Weekly quiz.
 I rarely use slides for this course. So if you
 don't come to class, you're doomed.
-<p><b>GRADING: </b>Mid-term exam (<b> 26.11.2019, in class</b>. 20%), final 20%, 2 HW (total %15), term research (presentation, %15), weekly quiz (total %30, max. 10 counted).
+<p><b>GRADING: </b>Mid-term exam \20%, final 20%, 2 HW (total %15), term research (presentation, %15), weekly quiz (total %30, max. 10 counted).
