@@ -2,7 +2,12 @@
 METU COGS 542: Grammars, Combinators and Cognition (Fall 2020, covid-2 term;)
 
 <b> The course is now online, thanks to C19. I put videos up in youtube, you watch them wherever and whenever you want, then we synch and discuss using zoom/webex at class time,
-or some mutually agreeable time. Quizzes are naturally take-home in online teaching.</b>
+or some mutually agreeable time. Quizzes are naturally take-home in online teaching.
+
+Weekly flow of the course: 1) I put the week's lecture video up in youtube. 2) You watch it before our meeting (synch) point. We discuss the topics of
+the week, and questions. 3) You do a short quiz on the week's topics, take home and solo work, and submit in PDF to us BY FRIDAY of the week. 
+</b>
+
 
 <p><b>WHERE:</b> Middle East Technical University (METU/ODTU), Informatics Institute, Cognitive Science Department
 
