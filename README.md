@@ -65,8 +65,8 @@ COURSE OUTLINE: </b>
 <b>REFERENCE MATERIAL: </b>
 
 There is a course reader in this repo. There is no textbook available for the material. The reader
-is mixture of preliminary material (on lambda calculus and combinators), tools (e.g. CCGlab), important
-papers and books about CCG and combinators.
+is a collection of preliminary material (on lambda calculus and combinators), tools (e.g. CCGlab), important
+papers and books about CCG and combinators, in language, planning, psychology and technology.
 
 <p>
 <b> LINKS</b>:
