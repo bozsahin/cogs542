@@ -63,15 +63,10 @@ COURSE OUTLINE: </b>
 
 <p>
 <b>REFERENCE MATERIAL: </b>
-<ol>
-<li>Bozsahin, C. (2020). CCGlab manual.
-<li>Piantadosi, Steven (2016). The computational origin of representation and conceptual change. ms., MIT.           
-<li> Kwiatkowski, T., Goldwater, S., Zettlemoyer, L., & Steedman, M. (2012). A probabilistic model of syntactic and semantic acquisition from child-directed utterances and their meanings. In Proceedings of the 13th EACL (pp. 234-244).
-<li>Bozsahin, C. (2012). Combinatory Linguistics. Berlin/Boston: Mouton.
-<li>Steedman, M., J. Baldridge (2011). CCG. In Non-transformational syntax. Borsley and Borjars (eds.). Blackwell. 
-<li>Zettlemoyer, L., M. Collins (2005). Learning to map sentences to logical form. 21st Conf on Uncertainty in AI. AAAI Meeting, Edinburgh.
-<li>Steedman, M. (2000). Plans, affordances and combinatory grammar. Linguistics and Philosophy. 25(5-6):723-753.
-</ol>
+
+There is a course reader in this repo. There is no textbook available for the material. The reader
+is mixture of preliminary material (on lambda calculus and combinators), tools (e.g. CCGlab), important
+papers and books about CCG and combinators.
 
 <p>
 <b> LINKS</b>:
