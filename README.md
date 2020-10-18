@@ -27,7 +27,7 @@ Office hours: open door policy except lecture days (currently T/Th)
 
 official Lecture hours:  Tuesdays 14.40-17.30 (no room allocation, due to online teaching, this is our synch hour).
 
-<p><b>TA:</b>  TBA.
+<p><b>TA:</b>  Ecenur Cagirici.
        
 <p><b>DISCUSSION</b>: Online at synch points (required), offline in newsgroup (highly recommended, and used for deciding grades):
        
