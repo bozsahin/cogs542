@@ -25,7 +25,7 @@ Online (no in-house lectures) phone: 210 7758 (better use my email for contact)
 
 Office hours: open door policy except lecture days (currently T/Th)
 
-official Lecture hours:  Tuesdays 14.40-17.30 (no room allocation, due to online teaching, this is our synch hour).
+official Lecture hours:  Tuesdays 14.40-17.30 (no room allocation, due to online teaching, this is our synch hour for Q&A, we start at 14.30).
 
 <p><b>TA:</b>  Ecenur Cagirici.
        
