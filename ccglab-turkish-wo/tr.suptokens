@@ -2,6 +2,6 @@
 
 cocuk kitabi okudu  |:|  !read !book !child  |;| 
 kitabi cocuk okudu  |:|  !read  |(| !fg !book |)|  !child  |;| 
-okudu cocuk kitabi  |:|  !read  |(| !bg book |)|   |(| !bg !child |)|   |;| 
-cocuk okudu kitabi  |:|  !read  |(| !bg book |)|  !child |;| 
+okudu cocuk kitabi  |:|  !read  |(| !bg !book |)|   |(| !bg !child |)|   |;| 
+cocuk okudu kitabi  |:|  !read  |(| !bg !book |)|  !child |;| 
 kitabi okudu cocuk  |:|  !read  |(| !fg !book |)|   |(| !bg !child |)|  |;| )

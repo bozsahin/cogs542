@@ -1,0 +1,16 @@
+% this is a test grammar
+
+to inf := vp/vp : \p.p;
+study v := vp: \x.!study x;
+mary n := np : !mary ;
+expected v := (s\np)/vp/np : \x1\p1\x2. !expect (p1 x1) x2;
+promised v := (s\np)/vp/np : \x1\p1\x2. !promise (p1 x2) x1 x2;
+persuaded v :=(s\np)/vp/np : \x1\p1\x2. !persuade (p1 x1) x1 x2;
+john n := np : !john ;
+and c := (@x\* @x)/* @x : \p\q\x.!and(p x)(q x);
+likes v := (s\np)/np: \x1\x2.!like x1 x2;
+hates v := (s\np)/np: \x1\x2.!hate x1 x2;
+cats n := np : !cats;
+(subjtr) np : sem --> s/(s\np) : \sem\p.p sem; % a unary rule for subject tr
+buy v := vp/np : \x\y.!buy x y;
+buys v := (s\np)/np : \x\y.!buy x y;

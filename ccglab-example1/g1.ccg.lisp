@@ -1,0 +1,62 @@
+(DEFPARAMETER *CCG-GRAMMAR*
+  '(((KEY 1) (PHON TO) (MORPH INF)
+     (SYN
+      (((BCAT VP) (FEATS NIL)) (DIR FS) (MODAL ALL) ((BCAT VP) (FEATS NIL))))
+     (SEM (LAM P P)) (PARAM 1.0))
+    ((KEY 2) (PHON STUDY) (MORPH V) (SYN ((BCAT VP) (FEATS NIL)))
+     (SEM (LAM X ("STUDY" X))) (PARAM 1.0))
+    ((KEY 3) (PHON MARY) (MORPH N) (SYN ((BCAT NP) (FEATS NIL))) (SEM "MARY")
+     (PARAM 1.0))
+    ((KEY 4) (PHON EXPECTED) (MORPH V)
+     (SYN
+      (((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+        (DIR FS) (MODAL ALL) ((BCAT VP) (FEATS NIL)))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X1 (LAM P1 (LAM X2 (("EXPECT" (P1 X1)) X2))))) (PARAM 1.0))
+    ((KEY 5) (PHON PROMISED) (MORPH V)
+     (SYN
+      (((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+        (DIR FS) (MODAL ALL) ((BCAT VP) (FEATS NIL)))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X1 (LAM P1 (LAM X2 ((("PROMISE" (P1 X2)) X1) X2)))))
+     (PARAM 1.0))
+    ((KEY 6) (PHON PERSUADED) (MORPH V)
+     (SYN
+      (((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+        (DIR FS) (MODAL ALL) ((BCAT VP) (FEATS NIL)))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X1 (LAM P1 (LAM X2 ((("PERSUADE" (P1 X1)) X1) X2)))))
+     (PARAM 1.0))
+    ((KEY 7) (PHON JOHN) (MORPH N) (SYN ((BCAT NP) (FEATS NIL))) (SEM "JOHN")
+     (PARAM 1.0))
+    ((KEY 8) (PHON AND) (MORPH C)
+     (SYN
+      ((((BCAT @X) (FEATS NIL)) (DIR BS) (MODAL STAR) ((BCAT @X) (FEATS NIL)))
+       (DIR FS) (MODAL STAR) ((BCAT @X) (FEATS NIL))))
+     (SEM (LAM P (LAM Q (LAM X (("AND" (P X)) (Q X)))))) (PARAM 1.0))
+    ((KEY 9) (PHON LIKES) (MORPH V)
+     (SYN
+      ((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X1 (LAM X2 (("LIKE" X1) X2)))) (PARAM 1.0))
+    ((KEY 10) (PHON HATES) (MORPH V)
+     (SYN
+      ((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X1 (LAM X2 (("HATE" X1) X2)))) (PARAM 1.0))
+    ((KEY 11) (PHON CATS) (MORPH N) (SYN ((BCAT NP) (FEATS NIL))) (SEM "CATS")
+     (PARAM 1.0))
+    ((KEY 12) (INSYN ((BCAT NP) (FEATS NIL))) (INSEM SEM)
+     (OUTSYN
+      (((BCAT S) (FEATS NIL)) (DIR FS) (MODAL ALL)
+       (((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))))
+     (OUTSEM (LAM SEM (LAM P (P SEM)))) (INDEX SUBJTR) (PARAM 1.0))
+    ((KEY 13) (PHON BUY) (MORPH V)
+     (SYN
+      (((BCAT VP) (FEATS NIL)) (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X (LAM Y (("BUY" X) Y)))) (PARAM 1.0))
+    ((KEY 14) (PHON BUYS) (MORPH V)
+     (SYN
+      ((((BCAT S) (FEATS NIL)) (DIR BS) (MODAL ALL) ((BCAT NP) (FEATS NIL)))
+       (DIR FS) (MODAL ALL) ((BCAT NP) (FEATS NIL))))
+     (SEM (LAM X (LAM Y (("BUY" X) Y)))) (PARAM 1.0))))
