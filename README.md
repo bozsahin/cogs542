@@ -48,7 +48,7 @@ COURSE OUTLINE: </b>
 
 <ul> 
 <li>W1: Combinators and variable-free computing: What are combinators?
-<li>W2-7: Combinators and language
+<li> Combinators and language
 <ul>
 <li>W2: Projective component of CCG
 <li>W3: Projected component of CCG
