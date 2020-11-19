@@ -48,22 +48,22 @@ COURSE OUTLINE: </b>
 
 <ul> 
 <li>W1: Combinators and variable-free computing: What are combinators?
-<li>W2-7: Combinators and language
+<li> Combinators and language
 <ul>
 <li>W2: Projective component of CCG
 <li>W3: Projected component of CCG
 <li>W4: Parsing and derivational structure
 <li>W5: Pieces of the projected component: which ones are observable?
 <li>W6: Learning the projected component's parameters
-<li>W7: Obtaining the projected component's items
+<li>W7-8: Obtaining the projected component's items (including probabilistic CCG)
 </ul>
-<li>W10: mid-term exam
-<li>W8-11: Combinators and mind
+<li>W9: mid-term exam
+<li>W10-14: Combinators and mind (short presentations by students)
 <ul>
 <li> Planning
-<li> Language of Thought
+<li> Thought
+<li> Language
 </ul>
-<li>W12-14: short presentations by students
 </ul>
 
 <p>
