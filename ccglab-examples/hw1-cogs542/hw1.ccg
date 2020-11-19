@@ -1,0 +1,4 @@
+okcunun n := s/(s\np[case=nom]) : \p.p !okcu;
+vur v := (s\np[case=nom])\np[case=acc] : \x1\x2. !hit x1 x2;
+hedef n := np: !hedef;
+-dugu rel := (np/np)\(s\np[case=acc]) : \p\q\x.!and (p x) (q x);
