@@ -62,7 +62,7 @@ COURSE OUTLINE: </b>
 <ul>
 <li> Planning
 <li> Thought
-<li>
+<li> Language
 </ul>
 </ul>
 
