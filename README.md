@@ -4,7 +4,7 @@ METU COGS 542: Grammars, Combinators and Cognition (Fall 2020, covid-2 term;)
 <b> The course is now online, thanks to Covid-19. </b>
 
 Weekly flow of the course: 1) I put the week's lecture video up in youtube. 2) You watch it before our meeting (synch) point. We discuss the topics of
-the week, and questions. 3) You do a short quiz on the week's topics, take home and solo work, and submit in PDF to us BY FRIDAY of the week. 4) You present a paper related to combinators, which we record. Synched attendance is required.
+the week, and questions. 3) You do a short quiz on the week's topics, take home and solo work, 4) You present a paper related to combinators, which we record. Synched attendance is required.
 
 
 
