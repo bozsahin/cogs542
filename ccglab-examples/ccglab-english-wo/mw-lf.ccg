@@ -1,0 +1,33 @@
+% a dummy file to automatically prepare .sup file LFs easily  -cemB
+%  (.sup assumes a hand-coded LF with proper parenths; which is difficult to remember)
+% The dummy part is the part of speech tag and the syntactic type.
+% Process as if it"s a .ccg file, then turn it into .sup
+
+"the dog ate the biscuit" x := x: !eat (!def !biscuit) (!def !dog);
+"the cat ate the biscuit" x := x: !eat (!def !biscuit) (!def !cat);
+"mommy ate the biscuit" x := x: !eat (!def !biscuit) !mommy;
+"the biscuit ate mommy" x := x: !eat (!def !biscuit) !mommy; % not favor OVS
+"mommy threw the ball" x := x: !throw (!def !ball) !mommy;
+"mommy threw the dog" x := x: !throw (!def !dog) !mommy;
+"threw the dog mommy" x := x: !throw (!def !dog) !mommy;
+"the dog saw mommy" x := x: !see !mommy (!def !dog) ;
+"mommy saw the dog" x := x: !see (!def !dog) !mommy;
+"the dog walked" x := x : !walk (!def !dog);
+"the cat slept" x := x: !sleep (!def !cat);
+"the cat walked" x := x : !walk (!def !cat);
+"mommy walked" x := x: !walk !mommy;
+"mommy slept" x := x: !sleep !mommy;
+"the dog" x := x : !def !dog;
+"the cat" x := x : !def !cat;
+"mommy" x := x : !mommy;
+
+% now another experiment: favor SVO wrt SVO' for English
+
+"mommy ate the biscuit and walked" x := x: !and (!eat (!def !biscuit) !mommy)
+                                             (!walk "mommy");
+"mommy saw the biscuit and slept" x := x: !and (!see (!def !biscuit) !mommy)
+                                             (!sleep "mommy");
+"the dog threw the biscuit and walked" x := x: !and (!throw (!def !biscuit) (!def !dog))
+                                             (!walk (!def !dog));
+"the dog walked and saw the cat" x := x: !and (!walk (!def !dog))
+                                           (!see (!def !cat) (!def !dog));

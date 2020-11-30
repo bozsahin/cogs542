@@ -1,0 +1,73 @@
+
+> (update-model "mw" 20 1.0 1.0 :load t)
+
+======================= l o a d i n g =======================================
+; loading #P"/Users/bozsahin/mysrc/CCGlab/commonlisp/micro-world/mw.ind"
+
+Project [mw] is assumed to consist of
+-----------------------------------------------------------------------------
+  CCG grammar source : mw.ccg $
+    Its token form   : mw.lisptokens $
+  Deduction grammar  : mw.ded $ (derived from mw.lisptokens)
+  Induction grammar  : mw.ind #
+  Supervision source : mw.sup ^
+  Model-specific code: mw.lisp ^
+  and other model-specific files you may create.
+       *CCG-GRAMMAR* : set from mw.ind
+   *LEX-RULES-TABLE* : set from mw.ind
+Required files: $ for deduction, # for induction, ^ for model development
+=============================================================================
+
+Supervision file loaded: mw.sup
+Done. use (show-training/save-training) to see/save the results
+T
+> (show-training)
+
+Training parameters: N = 20 alpha0 = 1.0 c = 1.0 n = 16
+Model parameters before and after training
+================================================
+key   lex             initial  final    diff 
+------------------------------------------------
+1     ATE               0.1 1.830736  (1.730736)
+2     ATE               0.1 1.943306  (1.843306)
+3     ATE               0.1 -.015323  (-.115323)
+4     ATE               0.1 -.120577  (-.220577)
+5     ATE               0.1 -.711019  (-.811019)
+6     ATE               0.1 -.711019  (-.811019)
+7     ATE               0.1 -.708053  (-.808053)
+8     ATE               0.1 -.708053  (-.808053)
+9     THREW             0.1 .7501085  (.6501085)
+10    THREW             0.1 .8014783  (.7014783)
+11    THREW             0.1 -.118362  (-.218362)
+12    THREW             0.1 -.244527  (-.344527)
+13    THREW             0.1 -.211085  (-.311085)
+14    THREW             0.1 -.211085  (-.311085)
+15    THREW             0.1 .0307358  (-.069264)
+16    THREW             0.1 -.004392  (-.104392)
+17    SAW               0.1 .7350879  (.6350879)
+18    SAW               0.1 .7322889  (.6322889)
+19    SAW               0.1 -.123451  (-.223451)
+20    SAW               0.1 -.122576  (-.222576)
+21    SAW               0.1 -.104947  (-.204947)
+22    SAW               0.1 -.104947  (-.204947)
+23    SAW               0.1 -.105727  (-.205727)
+24    SAW               0.1 -.105727  (-.205727)
+25    SLEPT             0.1 .4962243  (.3962243)
+26    SLEPT             0.1 -.296224  (-.396224)
+27    WALKED            0.1 .4966828  (.3966828)
+28    WALKED            0.1 -.296683  (-.396683)
+29    THE               0.1 -.760162  (-.860162)
+30    DOG               0.1 -.175816  (-.275816)
+31    CAT               0.1 -.187687  (-.287687)
+32    MOMMY             0.1 -.555663  (-.655663)
+33    BISCUIT           0.1  -0.1961  ( -0.2961)
+34    BALL              0.1 .0994394  (-.000561)
+35    TF                0.1 .2227249  (.1227249)
+36    TB                0.1 .3863095  (.2863095)
+37    T2F               0.1 -.473983  (-.573983)
+38    T2B               0.1 -.131126  (-.231126)
+39    T2FF              0.1 -.112926  (-.212927)
+40    T2BB              0.1 -.538472  (-.638472)
+================================================
+NIL
+> (dribble)

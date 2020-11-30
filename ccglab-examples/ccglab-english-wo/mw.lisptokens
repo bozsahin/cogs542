@@ -1,0 +1,63 @@
+(
+
+
+
+
+
+
+
+
+ate v  |:=|   |(| s |\\| np |)|  |/| np |:|   |\\| x |\\| y |.| !eat x y |;|    
+ate v  |:=|   |(| s |/| np |)|  |\\| np |:|   |\\| x |\\| y |.| !eat y x |;|    
+ate v  |:=|   |(| s |\\| np |)|  |/| np |:|   |\\| x |\\| y |.| !eat y x |;|    
+ate v  |:=|   |(| s |/| np |)|  |\\| np |:|   |\\| x |\\| y |.| !eat x y |;|    
+ate v  |:=|   |(| s |\\| np |)|  |\\| np |:|   |\\| x |\\| y |.| !eat x y |;|    
+ate v  |:=|   |(| s |\\| np |)|  |\\| np |:|   |\\| x |\\| y |.| !eat y x |;|    
+ate v  |:=|   |(| s |/| np |)|  |/| np |:|   |\\| x |\\| y |.| !eat x y |;|    
+ate v  |:=|   |(| s |/| np |)|  |/| np |:|   |\\| x |\\| y |.| !eat y x |;|    
+
+threw v  |:=|   |(| s |\\| np |)|  |/| np |:|   |\\| x |\\| y |.| !throw x y |;| 
+threw v  |:=|   |(| s |/| np |)|  |\\| np |:|   |\\| x |\\| y |.| !throw y x |;| 
+threw v  |:=|   |(| s |\\| np |)|  |/| np |:|   |\\| x |\\| y |.| !throw y x |;| 
+threw v  |:=|   |(| s |/| np |)|  |\\| np |:|   |\\| x |\\| y |.| !throw x y |;| 
+threw v  |:=|   |(| s |\\| np |)|  |\\| np |:|   |\\| x |\\| y |.| !throw x y |;| 
+threw v  |:=|   |(| s |\\| np |)|  |\\| np |:|   |\\| x |\\| y |.| !throw y x |;| 
+threw v  |:=|   |(| s |/| np |)|  |/| np |:|   |\\| x |\\| y |.| !throw x y |;| 
+threw v  |:=|   |(| s |/| np |)|  |/| np |:|   |\\| x |\\| y |.| !throw y x |;| 
+
+saw v  |:=|   |(| s |\\| np |)|  |/| np |:|   |\\| x |\\| y |.| !see x y |;| 
+saw v  |:=|   |(| s |/| np |)|  |\\| np |:|   |\\| x |\\| y |.| !see y x |;| 
+saw v  |:=|   |(| s |\\| np |)|  |/| np |:|   |\\| x |\\| y |.| !see y x |;| 
+saw v  |:=|   |(| s |/| np |)|  |\\| np |:|   |\\| x |\\| y |.| !see x y |;| 
+saw v  |:=|   |(| s |\\| np |)|  |\\| np |:|   |\\| x |\\| y |.| !see x y |;| 
+saw v  |:=|   |(| s |\\| np |)|  |\\| np |:|   |\\| x |\\| y |.| !see y x |;| 
+saw v  |:=|   |(| s |/| np |)|  |/| np |:|   |\\| x |\\| y |.| !see x y |;| 
+saw v  |:=|   |(| s |/| np |)|  |/| np |:|   |\\| x |\\| y |.| !see y x |;| 
+
+and x  |:=|   |(| @X |\\|  |*| @X |)|  |/|  |*| @X |:|   |\\| p |\\| q |\\| x |.| !and  |(| q x |)|   |(| p x |)|  |;| 
+
+
+
+
+slept v  |:=|  s |\\| np |:|   |\\| x |.| !sleep x |;|   
+slept v  |:=|  s |/| np |:|   |\\| x |.| !sleep x |;|   
+walked v  |:=|  s |\\| np |:|   |\\| x |.| !walk x |;| 
+walked v  |:=|  s |/| np |:|   |\\| x |.| !walk x |;| 
+
+
+
+the d  |:=|  np |/|  |*| n |:|   |\\| x |.| !def x |;| 
+dog n  |:=|  n  |:|  !dog |;| 
+cat n  |:=|  n  |:|  !cat |;| 
+mommy n  |:=|  np |:|  !mommy |;| 
+biscuit n  |:=|  n |:|  !biscuit |;| 
+ball n  |:=|  n  |:|  !ball |;| 
+
+
+
+ |(| tf |)|  np  |:|  lf  |-->|  s |/|  |(| s |\\| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| 
+ |(| tb |)|  np  |:|  lf  |-->|  s |\\|  |(| s |/| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| 
+ |(| t2f |)|  np  |:|  lf  |-->|   |(| s |\\| np |)|  |/|  |(| s |\\| np |\\| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| 
+ |(| t2b |)|  np  |:|  lf  |-->|   |(| s |\\| np |)|  |\\|  |(| s |\\| np |/| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| 
+ |(| t2ff |)|  np  |:|  lf  |-->|   |(| s |/| np |)|  |/|  |(| s |/| np |\\| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| 
+ |(| t2bb |)|  np  |:|  lf  |-->|   |(| s |/| np |)|  |\\|  |(| s |/| np |/| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| )

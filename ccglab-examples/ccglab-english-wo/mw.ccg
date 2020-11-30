@@ -1,0 +1,63 @@
+% toy thought experiment about laying all possible word orders possible
+% then picking them from data  -Cem Bozsahin
+
+% This is a toy experiment, meant to show the effect on transitive clauses.
+% Don't be surprised if weight of 'the' is decreased seriously, because it takes
+% part in too many bad derivations, although in supervision file its LF is always right.
+
+% 8 orders for each transitive clause;
+
+ate v := (s\np)/np: \x\y.!eat x y;   % SVO
+ate v := (s/np)\np: \x\y.!eat y x;   % SVO'
+ate v := (s\np)/np: \x\y.!eat y x;   % OVS
+ate v := (s/np)\np: \x\y.!eat x y;   % OVS'
+ate v := (s\np)\np: \x\y.!eat x y;   % SOV
+ate v := (s\np)\np: \x\y.!eat y x;   % OSV 
+ate v := (s/np)/np: \x\y.!eat x y;   % VOS
+ate v := (s/np)/np: \x\y.!eat y x;   % VSO
+
+threw v := (s\np)/np: \x\y.!throw x y;
+threw v := (s/np)\np: \x\y.!throw y x;
+threw v := (s\np)/np: \x\y.!throw y x;
+threw v := (s/np)\np: \x\y.!throw x y;
+threw v := (s\np)\np: \x\y.!throw x y;
+threw v := (s\np)\np: \x\y.!throw y x;
+threw v := (s/np)/np: \x\y.!throw x y;
+threw v := (s/np)/np: \x\y.!throw y x;
+
+saw v := (s\np)/np: \x\y.!see x y;
+saw v := (s/np)\np: \x\y.!see y x;
+saw v := (s\np)/np: \x\y.!see y x;
+saw v := (s/np)\np: \x\y.!see x y;
+saw v := (s\np)\np: \x\y.!see x y;
+saw v := (s\np)\np: \x\y.!see y x;
+saw v := (s/np)/np: \x\y.!see x y;
+saw v := (s/np)/np: \x\y.!see y x;
+
+and x := (@X\*@X)/*@X: \p\q\x.!and (q x) (p x);
+
+% 2 orders for any intransitive
+
+
+slept v := s\np: \x.!sleep x;  % SV
+slept v := s/np: \x.!sleep x;  % VS
+walked v := s\np: \x.!walk x;
+walked v := s/np: \x.!walk x;
+
+% arguments
+
+the d := np/*n: \x.!def x;
+dog n := n : !dog;
+cat n := n : !cat;
+mommy n := np: !mommy;
+biscuit n := n: !biscuit;
+ball n := n : !ball;
+
+% type raising
+
+(tf) np : lf --> s/(s\np) : \lf\p.p lf;
+(tb) np : lf --> s\(s/np) : \lf\p.p lf;
+(t2f) np : lf --> (s\np)/(s\np\np) : \lf\p.p lf;
+(t2b) np : lf --> (s\np)\(s\np/np) : \lf\p.p lf;
+(t2ff) np : lf --> (s/np)/(s/np\np) : \lf\p.p lf;
+(t2bb) np : lf --> (s/np)\(s/np/np) : \lf\p.p lf;
