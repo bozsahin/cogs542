@@ -1,0 +1,121 @@
+
+> (which-ccglab)
+
+"CCGlab, version 7.0.4"
+> (update-model "mw" 20 1.0 1.0 :load t)
+
+*Beamp* = NIL  *Beam-exp* = 0.9
+
+======================= l o a d i n g =======================================
+
+Project mw files
+-----------------------------------------------------------------------------
+  CCG grammar source       : mw.ccg
+          token form       : mw.lisptokens
+  Compiled/loaded grammar  : mw.ccg.lisp
+  Supervision native source: mw.sup
+  Supervision text source  : mw.supervision
+       *CCG-GRAMMAR*       : 41 entries
+   *LEX-RULES-TABLE*       : 6 entries
+=============================================================================
+
+Supervision file loaded: mw.sup
+
+Done. use (show-training/save-training) to see/save the results
+NIL
+> (show-training)
+The rule set used in the experiment:
+
+
+CCGlab, version 7.0.4
+
+To change a switch, use (setf <switchname> <value>)
+	      where <value> is T (on) or NIL (off)
+	  *f-apply*     T
+	  *b-apply*     T
+	  *f-comp*      T
+	  *b-comp*      T
+	  *fx-comp*     T
+	  *bx-comp*     T
+	  *f-sub*       T
+	  *b-sub*       T
+	  *fx-sub*      T
+	  *bx-sub*      T
+          *f-subbar*    NIL
+	  *b-subbar*    NIL
+	  *fx-subbar*   NIL
+	  *bx-subbar*   NIL
+	  *f-subcomp*   NIL
+	  *b-subcomp*   NIL
+	  *fx-subcomp*  NIL
+	  *bx-subcomp*  NIL
+          *f2-comp*     T
+	  *b2-comp*     T
+	  *fx2-comp*    T
+	  *bx2-comp*    T
+	  *f2-sub*      T
+	  *b2-sub*      T
+	  *fx2-sub*     T
+	  *bx2-sub*     T
+	  *f2-subcomp*  NIL
+	  *f3-comp*     T
+	  *b3-comp*     T
+	  *fx3-comp*    T
+	  *bx3-comp*    T
+
+*BEAMP* : NIL
+*LFFLAG* : T
+*NF-PARSE* : T
+*OOVP* : NIL
+*TYPE-RAISED-P* : NIL
+*Beamp* = NIL  *Beam-exp* = 0.9
+
+Training parameters: N = 20 alpha0 = 1.0 c = 1.0 n = 17  
+Model parameters before and after training
+================================================
+key   lex             initial  final    diff 
+------------------------------------------------
+1     ATE               0.1 -1.36068  (-1.46068)
+2     ATE               0.1 -1.55778  (-1.65778)
+3     ATE               0.1 1.560687  (1.460687)
+4     ATE               0.1 1.757783  (1.657783)
+5     ATE               0.1      0.1  (     0.0)
+6     ATE               0.1      0.1  (     0.0)
+7     ATE               0.1      0.1  (     0.0)
+8     ATE               0.1      0.1  (     0.0)
+9     THREW             0.1 -.083941  (-.183941)
+10    THREW             0.1 3.098229  (2.998229)
+11    THREW             0.1 .2839414  (.1839414)
+12    THREW             0.1 -2.89823  (-2.99823)
+13    THREW             0.1      0.1  (     0.0)
+14    THREW             0.1      0.1  (     0.0)
+15    THREW             0.1 .4482828  (.3482828)
+16    THREW             0.1 -.248284  (-.348284)
+17    SAW               0.1 2.943133  (2.843133)
+18    SAW               0.1 2.795931  (2.695931)
+19    SAW               0.1 -2.74313  (-2.84313)
+20    SAW               0.1 -2.59593  (-2.69593)
+21    SAW               0.1      0.1  (     0.0)
+22    SAW               0.1      0.1  (     0.0)
+23    SAW               0.1      0.1  (     0.0)
+24    SAW               0.1      0.1  (     0.0)
+25    AND               0.1      0.1  (     0.0)
+26    SLEPT             0.1      0.1  (     0.0)
+27    SLEPT             0.1      0.1  (     0.0)
+28    WALKED            0.1      0.1  (     0.0)
+29    WALKED            0.1      0.1  (     0.0)
+30    THE               0.1 -.514697  (-.614697)
+31    DOG               0.1 -.514698  (-.614698)
+32    CAT               0.1 -.496446  (-.596446)
+33    MOMMY             0.1 -.420445  (-.520445)
+34    BISCUIT           0.1 .1000073  (.0000073)
+35    BALL              0.1 .1000061  (.0000061)
+36    TF                0.1 .0158789  (-.084121)
+37    TB                0.1 .0158791  (-.084121)
+38    T2F               0.1 -.162036  (-.262036)
+39    T2B               0.1 0.015879  (-.084121)
+40    T2FF              0.1 .0158788  (-.084121)
+41    T2BB              0.1 -.065919  (-.165919)
+================================================
+NIL
+> 
