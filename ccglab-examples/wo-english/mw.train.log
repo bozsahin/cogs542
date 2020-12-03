@@ -2,6 +2,36 @@
 > (which-ccglab)
 
 "CCGlab, version 7.0.4"
+> (make-supervision "mw")
+
+Project name: mw
+  Input : (mw.supervision, mw.suptokens) 
+  Output: mw.sup 
+Check mw.supervision for errors and retry if load of mw.sup fails.
+Supervision file loaded: mw.sup
+T
+> (mlg "mw")
+
+
+======================= c o m p i l i n g ===================================
+
+Project name: mw
+  Input : (mw.ccg, mw.lisptokens)
+  Output: mw.ccg.lisp 
+** Check mw.ccg.lisp for THE FIRST ERROR in mw.ccg IF load fails.
+======================= l o a d i n g =======================================
+
+Project mw files
+-----------------------------------------------------------------------------
+  CCG grammar source       : mw.ccg
+          token form       : mw.lisptokens
+  Compiled/loaded grammar  : mw.ccg.lisp
+  Supervision native source: mw.sup
+  Supervision text source  : mw.supervision
+       *CCG-GRAMMAR*       : 41 entries
+   *LEX-RULES-TABLE*       : 6 entries
+=============================================================================
+T
 > (update-model "mw" 20 1.0 1.0 :load t)
 
 *Beamp* = NIL  *Beam-exp* = 0.9
@@ -70,52 +100,375 @@ To change a switch, use (setf <switchname> <value>)
 *TYPE-RAISED-P* : NIL
 *Beamp* = NIL  *Beam-exp* = 0.9
 
-Training parameters: N = 20 alpha0 = 1.0 c = 1.0 n = 17  
+Training parameters: N = 20 alpha0 = 1.0 c = 1.0 n = 15  
 Model parameters before and after training
 ================================================
 key   lex             initial  final    diff 
 ------------------------------------------------
-1     ATE               0.1 -1.36068  (-1.46068)
-2     ATE               0.1 -1.55778  (-1.65778)
-3     ATE               0.1 1.560687  (1.460687)
-4     ATE               0.1 1.757783  (1.657783)
-5     ATE               0.1      0.1  (     0.0)
-6     ATE               0.1      0.1  (     0.0)
-7     ATE               0.1      0.1  (     0.0)
-8     ATE               0.1      0.1  (     0.0)
-9     THREW             0.1 -.083941  (-.183941)
-10    THREW             0.1 3.098229  (2.998229)
-11    THREW             0.1 .2839414  (.1839414)
-12    THREW             0.1 -2.89823  (-2.99823)
-13    THREW             0.1      0.1  (     0.0)
-14    THREW             0.1      0.1  (     0.0)
-15    THREW             0.1 .4482828  (.3482828)
-16    THREW             0.1 -.248284  (-.348284)
-17    SAW               0.1 2.943133  (2.843133)
-18    SAW               0.1 2.795931  (2.695931)
-19    SAW               0.1 -2.74313  (-2.84313)
-20    SAW               0.1 -2.59593  (-2.69593)
-21    SAW               0.1      0.1  (     0.0)
-22    SAW               0.1      0.1  (     0.0)
-23    SAW               0.1      0.1  (     0.0)
-24    SAW               0.1      0.1  (     0.0)
-25    AND               0.1      0.1  (     0.0)
-26    SLEPT             0.1      0.1  (     0.0)
-27    SLEPT             0.1      0.1  (     0.0)
-28    WALKED            0.1      0.1  (     0.0)
-29    WALKED            0.1      0.1  (     0.0)
-30    THE               0.1 -.514697  (-.614697)
-31    DOG               0.1 -.514698  (-.614698)
-32    CAT               0.1 -.496446  (-.596446)
-33    MOMMY             0.1 -.420445  (-.520445)
-34    BISCUIT           0.1 .1000073  (.0000073)
-35    BALL              0.1 .1000061  (.0000061)
-36    TF                0.1 .0158789  (-.084121)
-37    TB                0.1 .0158791  (-.084121)
-38    T2F               0.1 -.162036  (-.262036)
-39    T2B               0.1 0.015879  (-.084121)
-40    T2FF              0.1 .0158788  (-.084121)
-41    T2BB              0.1 -.065919  (-.165919)
+1     ATE               1.0 5.586511  (4.586511)
+2     ATE               1.0 4.342474  (3.342474)
+3     ATE               1.0 -3.58651  (-4.58651)
+4     ATE               1.0 -2.34247  (-3.34247)
+5     ATE               1.0      1.0  (     0.0)
+6     ATE               1.0      1.0  (     0.0)
+7     ATE               1.0      1.0  (     0.0)
+8     ATE               1.0      1.0  (     0.0)
+9     THREW             1.0 4.803725  (3.803725)
+10    THREW             1.0  3.50026  ( 2.50026)
+11    THREW             1.0 -2.80372  (-3.80372)
+12    THREW             1.0 -1.50026  (-2.50026)
+13    THREW             1.0      1.0  (     0.0)
+14    THREW             1.0      1.0  (     0.0)
+15    THREW             1.0      1.0  (     0.0)
+16    THREW             1.0      1.0  (     0.0)
+17    SAW               1.0 4.365744  (3.365744)
+18    SAW               1.0 3.388238  (2.388238)
+19    SAW               1.0 -2.36574  (-3.36574)
+20    SAW               1.0 -1.38824  (-2.38824)
+21    SAW               1.0      1.0  (     0.0)
+22    SAW               1.0      1.0  (     0.0)
+23    SAW               1.0      1.0  (     0.0)
+24    SAW               1.0      1.0  (     0.0)
+25    AND               1.0      1.0  (     0.0)
+26    SLEPT             1.0      1.0  (     0.0)
+27    SLEPT             1.0      1.0  (     0.0)
+28    WALKED            1.0      1.0  (     0.0)
+29    WALKED            1.0      1.0  (     0.0)
+30    THE               1.0 .2894579  (-.710542)
+31    DOG               1.0 .2894604  (-0.71054)
+32    CAT               1.0 .3128408  (-.687159)
+33    MOMMY             1.0 .3642816  (-.635718)
+34    BISCUIT           1.0      1.0  (     0.0)
+35    BALL              1.0      1.0  (.0000005)
+36    TF                1.0 .9015982  (-.098402)
+37    TB                1.0 .9015982  (-.098402)
+38    T2F               1.0 0.714283  (-.285717)
+39    T2B               1.0 .9015982  (-.098402)
+40    T2FF              1.0 .9015982  (-.098402)
+41    T2BB              1.0 0.714283  (-.285717)
 ================================================
 NIL
+> (save-grammar "mw-trained")
+
+NIL
+> (lg "mw-trained")
+
+======================= l o a d i n g =======================================
+
+Project mw-trained files
+-----------------------------------------------------------------------------
+  Compiled/loaded grammar  : mw-trained.ccg.lisp
+       *CCG-GRAMMAR*       : 41 entries
+   *LEX-RULES-TABLE*       : 6 entries
+=============================================================================
+T
+> (rank '(mommy ate the biscuit))
+
+T
+> (probs)
+
+Most likely LF for the input: (MOMMY ATE THE BISCUIT)
+
+  ((EAT (DEF BISCUIT)) MOMMY) =
+  (EAT (DEF BISCUIT) MOMMY)
+
+Cumulative weight:  125.0
+
+Most probable derivation for it: (4 1 19)
+--------------------------------
+T2FF     2.0  (MOMMY) := (S/NP)/((S/NP)\NP)
+        : ((LAM LF (LAM P (P LF))) MOMMY)
+LEX      1.0  (ATE) := (S/NP)\NP
+        : (LAM X (LAM Y ((EAT Y) X)))
+>        3.0  (MOMMY)(ATE) := S/NP
+        : (((LAM LF (LAM P (P LF))) MOMMY) (LAM X (LAM Y ((EAT Y) X))))
+LEX      1.0  (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX      1.0  (BISCUIT) := N
+        : BISCUIT
+>        2.0  (THE)(BISCUIT) := NP
+        : ((LAM X (DEF X)) BISCUIT)
+>       13.0  (MOMMY ATE)(THE BISCUIT) := S
+        : ((((LAM LF (LAM P (P LF))) MOMMY) (LAM X (LAM Y ((EAT Y) X))))
+           ((LAM X (DEF X)) BISCUIT))
+
+Final LF, normal-order evaluated: 
+
+    ((EAT (DEF BISCUIT)) MOMMY) =
+    (EAT (DEF BISCUIT) MOMMY)
+
+
+Most weighted derivation : (4 1 1)
+--------------------------
+LEX      1.0  (MOMMY) := NP
+        : MOMMY
+LEX      1.0  (ATE) := (S\NP)/NP
+        : (LAM X (LAM Y ((EAT Y) X)))
+LEX      1.0  (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX      1.0  (BISCUIT) := N
+        : BISCUIT
+>        2.0  (THE)(BISCUIT) := NP
+        : ((LAM X (DEF X)) BISCUIT)
+>        3.0  (ATE)(THE BISCUIT) := S\NP
+        : ((LAM X (LAM Y ((EAT Y) X))) ((LAM X (DEF X)) BISCUIT))
+<       13.0  (MOMMY)(ATE THE BISCUIT) := S
+        : (((LAM X (LAM Y ((EAT Y) X))) ((LAM X (DEF X)) BISCUIT)) MOMMY)
+
+Final LF, normal-order evaluated: 
+
+    ((EAT MOMMY) (DEF BISCUIT)) =
+    (EAT MOMMY (DEF BISCUIT))
+
+Try (cky-pprint) to see all the parses, including the features,
+    (cky-pprint-probs <cell>) to pretty-print the parse in <cell>.
+NIL
+> (pprint "notice that most weighted derivation is not the most likely derivation")
+
+"notice that most weighted derivation is not the most likely derivation"
+> (pprint "also notice that most likely derivation comes from SVO' category of 'ate'")
+
+"also notice that most likely derivation comes from SVO' category of 'ate'"
+> (dribble)
+
+> (which-ccglab)
+
+"CCGlab, version 7.0.4"
+> (mlg "mw")
+
+
+======================= c o m p i l i n g ===================================
+
+Project name: mw
+  Input : (mw.ccg, mw.lisptokens)
+  Output: mw.ccg.lisp 
+** Check mw.ccg.lisp for THE FIRST ERROR in mw.ccg IF load fails.
+======================= l o a d i n g =======================================
+
+Project mw files
+-----------------------------------------------------------------------------
+  CCG grammar source       : mw.ccg
+          token form       : mw.lisptokens
+  Compiled/loaded grammar  : mw.ccg.lisp
+  Supervision native source: mw.sup
+  Supervision text source  : mw.supervision
+       *CCG-GRAMMAR*       : 41 entries
+   *LEX-RULES-TABLE*       : 6 entries
+=============================================================================
+T
+> (make-supervision "mw")
+
+Project name: mw
+  Input : (mw.supervision, mw.suptokens) 
+  Output: mw.sup 
+Check mw.supervision for errors and retry if load of mw.sup fails.
+Supervision file loaded: mw.sup
+T
 > 
+(update-model "mw" 20 1.0 1.0 :load t)
+
+*Beamp* = NIL  *Beam-exp* = 0.9
+
+======================= l o a d i n g =======================================
+
+Project mw files
+-----------------------------------------------------------------------------
+  CCG grammar source       : mw.ccg
+          token form       : mw.lisptokens
+  Compiled/loaded grammar  : mw.ccg.lisp
+  Supervision native source: mw.sup
+  Supervision text source  : mw.supervision
+       *CCG-GRAMMAR*       : 41 entries
+   *LEX-RULES-TABLE*       : 6 entries
+=============================================================================
+
+Supervision file loaded: mw.sup
+
+Done. use (show-training/save-training) to see/save the results
+NIL
+> (show-training)
+The rule set used in the experiment:
+
+
+CCGlab, version 7.0.4
+
+To change a switch, use (setf <switchname> <value>)
+	      where <value> is T (on) or NIL (off)
+	  *f-apply*     T
+	  *b-apply*     T
+	  *f-comp*      T
+	  *b-comp*      T
+	  *fx-comp*     T
+	  *bx-comp*     T
+	  *f-sub*       T
+	  *b-sub*       T
+	  *fx-sub*      T
+	  *bx-sub*      T
+          *f-subbar*    NIL
+	  *b-subbar*    NIL
+	  *fx-subbar*   NIL
+	  *bx-subbar*   NIL
+	  *f-subcomp*   NIL
+	  *b-subcomp*   NIL
+	  *fx-subcomp*  NIL
+	  *bx-subcomp*  NIL
+          *f2-comp*     T
+	  *b2-comp*     T
+	  *fx2-comp*    T
+	  *bx2-comp*    T
+	  *f2-sub*      T
+	  *b2-sub*      T
+	  *fx2-sub*     T
+	  *bx2-sub*     T
+	  *f2-subcomp*  NIL
+	  *f3-comp*     T
+	  *b3-comp*     T
+	  *fx3-comp*    T
+	  *bx3-comp*    T
+
+*BEAMP* : NIL
+*LFFLAG* : T
+*NF-PARSE* : T
+*OOVP* : NIL
+*TYPE-RAISED-P* : NIL
+*Beamp* = NIL  *Beam-exp* = 0.9
+
+Training parameters: N = 20 alpha0 = 1.0 c = 1.0 n = 15  
+Model parameters before and after training
+================================================
+key   lex             initial  final    diff 
+------------------------------------------------
+1     ATE               1.0 5.586511  (4.586511)
+2     ATE               1.0 4.342474  (3.342474)
+3     ATE               1.0 -3.58651  (-4.58651)
+4     ATE               1.0 -2.34247  (-3.34247)
+5     ATE               1.0      1.0  (     0.0)
+6     ATE               1.0      1.0  (     0.0)
+7     ATE               1.0      1.0  (     0.0)
+8     ATE               1.0      1.0  (     0.0)
+9     THREW             1.0 4.803725  (3.803725)
+10    THREW             1.0  3.50026  ( 2.50026)
+11    THREW             1.0 -2.80372  (-3.80372)
+12    THREW             1.0 -1.50026  (-2.50026)
+13    THREW             1.0      1.0  (     0.0)
+14    THREW             1.0      1.0  (     0.0)
+15    THREW             1.0      1.0  (     0.0)
+16    THREW             1.0      1.0  (     0.0)
+17    SAW               1.0 4.365744  (3.365744)
+18    SAW               1.0 3.388238  (2.388238)
+19    SAW               1.0 -2.36574  (-3.36574)
+20    SAW               1.0 -1.38824  (-2.38824)
+21    SAW               1.0      1.0  (     0.0)
+22    SAW               1.0      1.0  (     0.0)
+23    SAW               1.0      1.0  (     0.0)
+24    SAW               1.0      1.0  (     0.0)
+25    AND               1.0      1.0  (     0.0)
+26    SLEPT             1.0      1.0  (     0.0)
+27    SLEPT             1.0      1.0  (     0.0)
+28    WALKED            1.0      1.0  (     0.0)
+29    WALKED            1.0      1.0  (     0.0)
+30    THE               1.0 .2894579  (-.710542)
+31    DOG               1.0 .2894604  (-0.71054)
+32    CAT               1.0 .3128408  (-.687159)
+33    MOMMY             1.0 .3642816  (-.635718)
+34    BISCUIT           1.0      1.0  (     0.0)
+35    BALL              1.0      1.0  (.0000005)
+36    TF                1.0 .9015982  (-.098402)
+37    TB                1.0 .9015982  (-.098402)
+38    T2F               1.0 0.714283  (-.285717)
+39    T2B               1.0 .9015982  (-.098402)
+40    T2FF              1.0 .9015982  (-.098402)
+41    T2BB              1.0 0.714283  (-.285717)
+================================================
+NIL
+> (save-training "mw.trained")
+
+NIL
+> (lg "mw.trained")
+
+======================= l o a d i n g =======================================
+
+Project mw.trained files
+-----------------------------------------------------------------------------
+  Compiled/loaded grammar  : mw.trained.ccg.lisp
+       *CCG-GRAMMAR*       : 41 entries
+   *LEX-RULES-TABLE*       : 6 entries
+=============================================================================
+T
+> (rank '(mommy ate the biscuit))
+
+T
+> (probs)
+
+Most likely LF for the input: (MOMMY ATE THE BISCUIT)
+
+  ((EAT (DEF BISCUIT)) MOMMY) =
+  (EAT (DEF BISCUIT) MOMMY)
+
+Cumulative weight:  217.04866
+
+Most probable derivation for it: (4 1 10)
+--------------------------------
+LEX  .289458  (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX      1.0  (BISCUIT) := N
+        : BISCUIT
+>    1.28946  (THE)(BISCUIT) := NP
+        : ((LAM X (DEF X)) BISCUIT)
+TF   1.26588  (MOMMY) := S/(S\NP)
+        : ((LAM LF (LAM P (P LF))) MOMMY)
+LEX  5.58651  (ATE) := (S\NP)/NP
+        : (LAM X (LAM Y ((EAT X) Y)))
+T2B  2.19106  (THE BISCUIT) := (S\NP)\((S\NP)/NP)
+        : ((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) BISCUIT))
+<    7.77757  (ATE)(THE BISCUIT) := S\NP
+        : (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) BISCUIT))
+           (LAM X (LAM Y ((EAT X) Y))))
+>    24.9586  (MOMMY)(ATE THE BISCUIT) := S
+        : (((LAM LF (LAM P (P LF))) MOMMY)
+           (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) BISCUIT))
+            (LAM X (LAM Y ((EAT X) Y)))))
+
+Final LF, normal-order evaluated: 
+
+    ((EAT (DEF BISCUIT)) MOMMY) =
+    (EAT (DEF BISCUIT) MOMMY)
+
+
+Most weighted derivation : (4 1 10)
+--------------------------
+LEX  .289458  (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX      1.0  (BISCUIT) := N
+        : BISCUIT
+>    1.28946  (THE)(BISCUIT) := NP
+        : ((LAM X (DEF X)) BISCUIT)
+TF   1.26588  (MOMMY) := S/(S\NP)
+        : ((LAM LF (LAM P (P LF))) MOMMY)
+LEX  5.58651  (ATE) := (S\NP)/NP
+        : (LAM X (LAM Y ((EAT X) Y)))
+T2B  2.19106  (THE BISCUIT) := (S\NP)\((S\NP)/NP)
+        : ((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) BISCUIT))
+<    7.77757  (ATE)(THE BISCUIT) := S\NP
+        : (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) BISCUIT))
+           (LAM X (LAM Y ((EAT X) Y))))
+>    24.9586  (MOMMY)(ATE THE BISCUIT) := S
+        : (((LAM LF (LAM P (P LF))) MOMMY)
+           (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) BISCUIT))
+            (LAM X (LAM Y ((EAT X) Y)))))
+
+Final LF, normal-order evaluated: 
+
+    ((EAT (DEF BISCUIT)) MOMMY) =
+    (EAT (DEF BISCUIT) MOMMY)
+
+Try (cky-pprint) to see all the parses, including the features,
+    (cky-pprint-probs <cell>) to pretty-print the parse in <cell>.
+NIL
+> (pprint "Notice that most likely derivation comes from SVO category of 'ate' after training")
+
+"Notice that most likely derivation comes from SVO category of 'ate' after training"
+> (pprint "Try the same expression before training, i.e. with mw.ccg.lisp")
+
+"Try the same expression before training, i.e. with mw.ccg.lisp"
+> (dribble)

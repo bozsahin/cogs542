@@ -51,4 +51,13 @@ dog n  |:=|  n  |:|  !dog |;|
 cat n  |:=|  n  |:|  !cat |;| 
 mommy n  |:=|  np |:|  !mommy |;| 
 biscuit n  |:=|  n |:|  !biscuit |;| 
-ball n  |:=|  n  |:|  !ball |;| )
+ball n  |:=|  n  |:|  !ball |;| 
+
+
+
+ |(| tf |)|  np  |:|  lf  |-->|  s |/|  |(| s |\\| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| 
+ |(| tb |)|  np  |:|  lf  |-->|  s |\\|  |(| s |/| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| 
+ |(| t2f |)|  np  |:|  lf  |-->|   |(| s |\\| np |)|  |/|  |(| s |\\| np |\\| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| 
+ |(| t2b |)|  np  |:|  lf  |-->|   |(| s |\\| np |)|  |\\|  |(| s |\\| np |/| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| 
+ |(| t2ff |)|  np  |:|  lf  |-->|   |(| s |/| np |)|  |/|  |(| s |/| np |\\| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| 
+ |(| t2bb |)|  np  |:|  lf  |-->|   |(| s |/| np |)|  |\\|  |(| s |/| np |/| np |)|   |:|   |\\| lf |\\| p |.| p lf |;| )

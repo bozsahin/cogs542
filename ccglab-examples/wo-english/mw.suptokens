@@ -1,17 +1,15 @@
-(the dog ate the biscuit  |:|  "EAT"  |(| "DEF" "BISCUIT" |)|   |(| "DEF" "DOG" |)|   |;| 
-the cat ate the biscuit  |:|  "EAT"  |(| "DEF" "BISCUIT" |)|   |(| "DEF" "CAT" |)|   |;|  
-mommy ate the biscuit  |:|  "EAT"  |(| "DEF" "BISCUIT" |)|  "MOMMY"  |;| 
-the biscuit ate mommy  |:|  "EAT"  |(| "DEF" "BISCUIT" |)|  "MOMMY"  |;| 
-mommy threw the ball  |:|  "THROW"  |(| "DEF" "BALL" |)|  "MOMMY"  |;| 
-mommy threw the dog  |:|  "THROW"  |(| "DEF" "DOG" |)|  "MOMMY"  |;| 
-threw the dog mommy  |:|  "THROW"  |(| "DEF" "DOG" |)|  "MOMMY"  |;| 
-the dog saw mommy  |:|   "SEE" "MOMMY"  |(| "DEF" "DOG" |)|   |;|  
-mommy saw the dog  |:|   "SEE"  |(| "DEF" "DOG" |)|  "MOMMY"  |;|  
-the dog walked  |:|   "WALK"  |(| "DEF" "DOG" |)|   |;|  
-the cat slept  |:|   "SLEEP"  |(| "DEF" "CAT" |)|   |;|  
-the cat walked  |:|   "WALK"  |(| "DEF" "CAT" |)|   |;|  
-mommy walked  |:|   "WALK" "MOMMY"  |;|  
-mommy slept  |:|   "SLEEP" "MOMMY"  |;|  
-the dog  |:|   "DEF" "DOG"  |;|  
-the cat  |:|   "DEF" "CAT"  |;|  
-mommy  |:|   "MOMMY"  |;|  )
+(the dog ate the biscuit  |:|  !EAT  |(| !DEF !BISCUIT |)|   |(| !DEF !DOG |)|   |;| 
+the cat ate the biscuit  |:|  !EAT  |(| !DEF !BISCUIT |)|   |(| !DEF !CAT |)|   |;|  
+mommy ate the biscuit  |:|  !EAT  |(| !DEF !BISCUIT |)|  !MOMMY  |;| 
+mommy threw the ball  |:|  !THROW  |(| !DEF !BALL |)|  !MOMMY  |;| 
+mommy threw the dog  |:|  !THROW  |(| !DEF !DOG |)|  !MOMMY  |;| 
+the dog saw mommy  |:|   !SEE !MOMMY  |(| !DEF !DOG |)|   |;|  
+mommy saw the dog  |:|   !SEE  |(| !DEF !DOG |)|  !MOMMY  |;|  
+the dog walked  |:|   !WALK  |(| !DEF !DOG |)|   |;|  
+the cat slept  |:|   !SLEEP  |(| !DEF !CAT |)|   |;|  
+the cat walked  |:|   !WALK  |(| !DEF !CAT |)|   |;|  
+mommy walked  |:|   !WALK !MOMMY  |;|  
+mommy slept  |:|   !SLEEP !MOMMY  |;|  
+the dog  |:|   !DEF !DOG  |;|  
+the cat  |:|   !DEF !CAT  |;|  
+mommy  |:|   !MOMMY  |;|  )
