@@ -1,0 +1,89 @@
+
+> (mlg "g1")
+
+
+======================= c o m p i l i n g ===================================
+
+Project name: g1
+  Input : (g1.ccg, g1.lisptokens)
+  Output: g1.ccg.lisp 
+** Check g1.ccg.lisp for THE FIRST ERROR in g1.ccg IF load fails.
+======================= l o a d i n g =======================================
+
+Project g1 files
+-----------------------------------------------------------------------------
+  CCG grammar source       : g1.ccg
+          token form       : g1.lisptokens
+  Compiled/loaded grammar  : g1.ccg.lisp
+       *CCG-GRAMMAR*       : 14 entries
+   *LEX-RULES-TABLE*       : 1 entries
+=============================================================================
+T
+> (p '(john persuaded mary to study))
+
+T
+> (ders)
+
+
+Derivation 1
+--------------
+LEX   (JOHN) := NP
+        : JOHN
+LEX   (PERSUADED) := ((S\NP)/VP)/NP
+        : (LAM X1 (LAM P1 (LAM X2 (((PERSUADE (P1 X1)) X1) X2))))
+LEX   (MARY) := NP
+        : MARY
+>     (PERSUADED)(MARY) := (S\NP)/VP
+        : ((LAM X1 (LAM P1 (LAM X2 (((PERSUADE (P1 X1)) X1) X2)))) MARY)
+LEX   (TO) := VP/VP
+        : (LAM P P)
+LEX   (STUDY) := VP
+        : (LAM X (STUDY X))
+>     (TO)(STUDY) := VP
+        : ((LAM P P) (LAM X (STUDY X)))
+>     (PERSUADED MARY)(TO STUDY) := S\NP
+        : (((LAM X1 (LAM P1 (LAM X2 (((PERSUADE (P1 X1)) X1) X2)))) MARY)
+           ((LAM P P) (LAM X (STUDY X))))
+<     (JOHN)(PERSUADED MARY TO STUDY) := S
+        : ((((LAM X1 (LAM P1 (LAM X2 (((PERSUADE (P1 X1)) X1) X2)))) MARY)
+            ((LAM P P) (LAM X (STUDY X))))
+           JOHN)
+
+Final LF, normal-order evaluated: 
+
+    (((PERSUADE (STUDY MARY)) MARY) JOHN) =
+    (PERSUADE (STUDY MARY) MARY JOHN)
+
+Derivation 2
+--------------
+SUBJTR (JOHN) := S/(S\NP)
+        : ((LAM SEM (LAM P (P SEM))) JOHN)
+LEX   (PERSUADED) := ((S\NP)/VP)/NP
+        : (LAM X1 (LAM P1 (LAM X2 (((PERSUADE (P1 X1)) X1) X2))))
+LEX   (MARY) := NP
+        : MARY
+>     (PERSUADED)(MARY) := (S\NP)/VP
+        : ((LAM X1 (LAM P1 (LAM X2 (((PERSUADE (P1 X1)) X1) X2)))) MARY)
+LEX   (TO) := VP/VP
+        : (LAM P P)
+LEX   (STUDY) := VP
+        : (LAM X (STUDY X))
+>     (TO)(STUDY) := VP
+        : ((LAM P P) (LAM X (STUDY X)))
+>     (PERSUADED MARY)(TO STUDY) := S\NP
+        : (((LAM X1 (LAM P1 (LAM X2 (((PERSUADE (P1 X1)) X1) X2)))) MARY)
+           ((LAM P P) (LAM X (STUDY X))))
+>     (JOHN)(PERSUADED MARY TO STUDY) := S
+        : (((LAM SEM (LAM P (P SEM))) JOHN)
+           (((LAM X1 (LAM P1 (LAM X2 (((PERSUADE (P1 X1)) X1) X2)))) MARY)
+            ((LAM P P) (LAM X (STUDY X)))))
+
+Final LF, normal-order evaluated: 
+
+    (((PERSUADE (STUDY MARY)) MARY) JOHN) =
+    (PERSUADE (STUDY MARY) MARY JOHN)
+
+Try (cky-pprint) to see the details including the features and slash modalities.
+    (cky-reveal-cell <cell>) to pretty-print the parse in <cell>.
+NIL
+> (dribble)
