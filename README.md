@@ -1,12 +1,11 @@
 # cogs542
-METU COGS 542: Grammars, Combinators and Cognition (Fall 2020, covid-2 term;)
+METU COGS 542: Grammars, Combinators and Cognition (Fall 2021, covid-3 term;)
 
 <b> The course is now online. </b>
 
 Weekly flow of the course: 1) I put the week's lecture video up in youtube. 2) You watch it before our meeting (synch) point. We discuss the topics of
-the week, and questions. 3) You do a short quiz on the week's topics, take home and solo work, 4) You present a paper related to combinators, which we record. Synched attendance is required.
-
-
+the week, and questions. 3) We do Q&A-Discussion face to face, in a collectively determined date and time, for 2 hours max (because of C19)
+4) You do a short quiz on the week's topics, take home and solo work, 4) You present a paper related to combinators, which we record. Synched attendance is required.
 
 <p><b>WHERE:</b> Middle East Technical University (METU/ODTU), Informatics Institute, Cognitive Science Department
 
@@ -18,17 +17,17 @@ the week, and questions. 3) You do a short quiz on the week's topics, take home 
 <b>CATALOG DESCRIPTION: </b> Combinators and their syntax-semantics. Combinators and the lexicon. Morphology and grammar. Parsing and language acquisition. Syntactic analyses of various phenomena using combinators. Codeterminism in syntax and semantics. Combinators and serializable knowledge.
 
 <p>
-<b>LECTURER: </b> Cem Bozsahin (Fall 2020)
+<b>LECTURER: </b> Cem Bozsahin (Fall 2021)
        
-Online (no in-house lectures) phone: 210 7758 (better use my email for contact)
+(no in-house lectures) phone: 210 7758 (better use my email for contact)
 
-Office hours: open door policy except lecture days (currently T/Th)
+Office hours: TBA
 
-official Lecture hours:  Tuesdays 14.40-17.30 (no room allocation, due to online teaching, this is our synch hour for Q&A, we start at 14.30).
+official Lecture hours:  Tuesdays 11.40-14.30 (max. 40 minutes per session). THIS IS SYNCH POINT FOR YOU TO FINISH WATCHING THE WEEK'S VIDEO.  
 
 <p><b>TA:</b>  Ecenur Cagirici.
        
-<p><b>DISCUSSION</b>: Online at synch points (required), offline in newsgroup (highly recommended, and used for deciding grades):
+<p><b>DISCUSSION</b>: face to face at Q&A, Online at synch points (required), offline in newsgroup (highly recommended, and used for deciding grades):
        
 [group](https://groups.google.com/forum/#!forum/metu-cogs-542)
 
@@ -49,12 +48,13 @@ COURSE OUTLINE: </b>
 <li>W1: Combinators and variable-free computing: What are combinators?
 <li> Combinators and language
 <ul>
-<li>W2: Projective component of CCG
-<li>W3: Projected component of CCG
-<li>W4: Parsing and derivational structure
+<li>W2: Projecting to surface structure by combinators
+<li>W3: Projected component of grammar
+<li>W4: Parsing and analysis
 <li>W5: Pieces of the projected component: which ones are observable?
 <li>W6: Learning the projected component's parameters
-<li>W7-8: Obtaining the projected component's items (including probabilistic CCG)
+<li>W7: Obtaining the projected component's items (including probabilistic grammar)
+<li> W8: Monads and combinators
 </ul>
 <li>W9: mid-term exam
 <li>W10-14: Combinators and mind (short presentations by students)
@@ -70,7 +70,7 @@ COURSE OUTLINE: </b>
 
 There is a course reader in this repo. There is no textbook available for the material. The reader
 is a collection of preliminary material (on lambda calculus and combinators), tools (e.g. CCGlab), and important
-papers and books about CCG and combinators, in language, planning, psychology and technology.
+papers and books about combinators, in language, planning, psychology and technology.
 
 <p>
 <b> LINKS</b>:
