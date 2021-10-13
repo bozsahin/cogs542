@@ -1,12 +1,12 @@
 # cogs542
 METU COGS 542: Grammars, Combinators and Cognition (Fall 2021, covid-3 term;)
 
-<b> The course is now HYBRID. 
+<b> The course is now HYBRID. (%60 of official contact hours is face to face, i.e. 25 hours) 
 <a href="https://bozsahin.github.io/">Please read the top of this page here as potential student.</a> </b>
 
 Weekly flow of the course: 1) I put the week's lecture video up in youtube. 2) You watch it before our meeting (synch) point. We discuss the topics of
 the week, and questions. 3) We do Q&A-Discussion face to face, in a collectively determined date and time, for 2 hours max (because of C19)
-4) You do a short quiz on the week's topics, take home and solo work, 4) You present a paper related to combinators, which we record. Synched attendance is required.
+4) You do a short quiz on the week's topics, take home and solo work, 4) You present a paper related to combinators, which we record.
 
 <p><b>WHERE:</b> Middle East Technical University (METU/ODTU), Informatics Institute, Cognitive Science Department
 
