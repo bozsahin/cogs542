@@ -40,7 +40,7 @@ official Lecture hours:  Tuesdays 11.40-14.30 (max. 40 minutes per session). THI
 This course is intended as a course in computing track of Cognitive Science. It can be an elective course for other departments.
 
 <p>
-<b>COURSE OBJECTIVES: </b> To gain an understanding of how order and its semantics can give rise to linguistic structure. To appreciate the different implications of type-dependent and structure-dependent grammars. To build models of syntax, morphology and parsing using combinators and Combinatory Categorial Grammar. To situate combinatory theories in cognitive science including philosophy, language, music, planning and reasoning. 
+<b>COURSE OBJECTIVES: </b> To gain an understanding of how order and its semantics can give rise to linguistic structure. To appreciate the different implications of type-dependent and structure-dependent grammars. To build models of syntax, morphology and parsing using combinators. To situate combinatory theories in cognitive science including philosophy, language, music, planning and reasoning. 
 
 <p><b>
 COURSE OUTLINE: </b>
