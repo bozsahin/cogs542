@@ -63,6 +63,7 @@ COURSE OUTLINE: </b>
 <li> Planning
 <li> Thought
 <li> Language
+<li> Universal computation
 </ul>
 </ul>
 
