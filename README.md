@@ -85,4 +85,4 @@ as the computational tool.
 <b> NOTES:</b> In this repo.
        
 <p><b>COURSE CONDUCT: </b> 11 weeks of lecture and discussions. 3 weeks of research discussion including term presentations. Homework. Weekly quiz.
-<p><b>GRADING: </b>Mid-term exam 15%, final 15%, 2 HW (total %10), presentation %15, weekly quiz (total %45, max. 10 counted).
+<p><b>GRADING: </b>Mid-term exam 15%, final 15%, 1 HW %10, presentation %15, weekly quiz (total %45, max. 9 counted).
