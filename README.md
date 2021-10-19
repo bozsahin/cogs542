@@ -57,8 +57,8 @@ COURSE OUTLINE: </b>
 <li>W5: Pieces of the projected component: which ones are observable?
 <li>W6: Learning the projected component's parameters
 <li>W7: Obtaining the projected component's items (including probabilistic grammar)
-<li> W8: Monads and combinators
 </ul>
+<li> W8: Monads and combinators
 <li>W9: mid-term exam
 <li>W10-14: Combinators and mind (short presentations by students)
 <ul>
