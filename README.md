@@ -24,7 +24,9 @@ the week, and questions. 3) We do Q&A-Discussion face to face, in a collectively
 
 Office hours: TBA
 
-official Lecture hours:  Tuesdays 11.40-14.30 (max. 40 minutes per session). THIS IS SYNCH POINT FOR YOU TO FINISH WATCHING THE WEEK'S VIDEO.  
+Official Lecture hours:  Tuesdays 11.40-14.30 (max. 40 minutes per session). THIS IS SYNCH POINT FOR YOU TO FINISH WATCHING THE WEEK'S VIDEO.  
+
+Room for face to face meetings: S-03. Max pandemic capacity: 15 people. BRING HEAVY COATS. WE WILL OPEN ALL WINDOWS.
 
 <p><b>TA:</b>  Ecenur Cagirici.
        
