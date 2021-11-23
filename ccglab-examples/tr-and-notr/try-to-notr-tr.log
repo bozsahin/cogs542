@@ -1,0 +1,258 @@
+
+> (mlg "try-to")
+
+
+======================= c o m p i l i n g ===================================
+
+Project name: try-to
+  Input : (try-to.ccg, try-to.lisptokens)
+  Output: try-to.ccg.lisp 
+** IF load fails, check try-to.ccg.lisp for THE FIRST ERROR in try-to.ccg.
+======================= l o a d i n g =======================================
+
+Project try-to file system (some optional, some system-generated)
+-----------------------------------------------------------------------------
+  CCG grammar source       : try-to.ccg
+          token form       : try-to.lisptokens
+  Compiled/loaded grammar  : try-to.ccg.lisp
+       *CCG-GRAMMAR*       : 5 entries
+   *LEX-RULES-TABLE*       : 0 entries
+=============================================================================
+T
+> (tr "try-to" '(v))
+
+======================= l o a d i n g =======================================
+
+Project try-to file system (some optional, some system-generated)
+-----------------------------------------------------------------------------
+  CCG grammar source       : try-to.ccg
+          token form       : try-to.lisptokens
+  Compiled/loaded grammar  : try-to.ccg.lisp
+       *CCG-GRAMMAR*       : 5 entries
+   *LEX-RULES-TABLE*       : 0 entries
+=============================================================================
+
+Summary of compiling type-raising for grammar   : try-to.ccg.lisp
+There were NO errors/warnings in deriving second order functions
+Number of lexical entries                       : 5
+Number of lexical functions considered          : 2
+Number of second-order case functions generated : 2
+Number of paradigmatic functions out of them    : 2
+Use (mergesave-tr <pn>) to merge and save the rules
+ with current grammar to <pn>.ccg.lisp
+NIL
+> (mergesave-tr "try-to-tr")
+
+Type-raising rules added at the end of *ccg-grammar*
+compiled, subsumed and saved.
+NIL
+> (lg "try-to-tr")
+
+======================= l o a d i n g =======================================
+
+Project try-to-tr file system (some optional, some system-generated)
+-----------------------------------------------------------------------------
+  Compiled/loaded grammar  : try-to-tr.ccg.lisp
+       *CCG-GRAMMAR*       : 7 entries
+   *LEX-RULES-TABLE*       : 2 entries
+=============================================================================
+T
+> (p '(tries to hit the target))
+
+T
+> (ders)
+
+
+Derivation 1
+--------------
+LEX   (TRIES) := (S\NP)/VP
+        : (LAM P (LAM X ((TRY (P X)) X)))
+LEX   (TO) := VP/VP
+        : (LAM P P)
+LEX   (HIT) := VP/NP
+        : (LAM X (LAM Y ((HIT X) Y)))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TARGET) := N
+        : (LAM X (TARGET X))
+>     (THE)(TARGET) := NP
+        : ((LAM X (DEF X)) (LAM X (TARGET X)))
+>     (HIT)(THE TARGET) := VP
+        : ((LAM X (LAM Y ((HIT X) Y))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+>     (TO)(HIT THE TARGET) := VP
+        : ((LAM P P)
+           ((LAM X (LAM Y ((HIT X) Y))) ((LAM X (DEF X)) (LAM X (TARGET X)))))
+>     (TRIES)(TO HIT THE TARGET) := S\NP
+        : ((LAM P (LAM X ((TRY (P X)) X)))
+           ((LAM P P)
+            ((LAM X (LAM Y ((HIT X) Y))) ((LAM X (DEF X)) (LAM X (TARGET X))))))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X ((TRY ((HIT (DEF (LAM X (TARGET X)))) X)) X)) =
+    (\ X . TRY (HIT (DEF (\ X . TARGET X)) X) X)
+
+Derivation 2
+--------------
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TARGET) := N
+        : (LAM X (TARGET X))
+>     (THE)(TARGET) := NP
+        : ((LAM X (DEF X)) (LAM X (TARGET X)))
+LEX   (TRIES) := (S\NP)/VP
+        : (LAM P (LAM X ((TRY (P X)) X)))
+LEX   (TO) := VP/VP
+        : (LAM P P)
+LEX   (HIT) := VP/NP
+        : (LAM X (LAM Y ((HIT X) Y)))
+_G2_476 (THE TARGET) := VP\(VP/NP)
+        : ((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+<     (HIT)(THE TARGET) := VP
+        : (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+           (LAM X (LAM Y ((HIT X) Y))))
+>     (TO)(HIT THE TARGET) := VP
+        : ((LAM P P)
+           (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+            (LAM X (LAM Y ((HIT X) Y)))))
+>     (TRIES)(TO HIT THE TARGET) := S\NP
+        : ((LAM P (LAM X ((TRY (P X)) X)))
+           ((LAM P P)
+            (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+             (LAM X (LAM Y ((HIT X) Y))))))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X ((TRY ((HIT (DEF (LAM X (TARGET X)))) X)) X)) =
+    (\ X . TRY (HIT (DEF (\ X . TARGET X)) X) X)
+
+Derivation 3
+--------------
+LEX   (TO) := VP/VP
+        : (LAM P P)
+LEX   (HIT) := VP/NP
+        : (LAM X (LAM Y ((HIT X) Y)))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TARGET) := N
+        : (LAM X (TARGET X))
+>     (THE)(TARGET) := NP
+        : ((LAM X (DEF X)) (LAM X (TARGET X)))
+>     (HIT)(THE TARGET) := VP
+        : ((LAM X (LAM Y ((HIT X) Y))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+>     (TO)(HIT THE TARGET) := VP
+        : ((LAM P P)
+           ((LAM X (LAM Y ((HIT X) Y))) ((LAM X (DEF X)) (LAM X (TARGET X)))))
+LEX   (TRIES) := (S\NP)/VP
+        : (LAM P (LAM X ((TRY (P X)) X)))
+_G2_477 (TO HIT THE TARGET) := (S\NP)\((S\NP)/VP)
+        : ((LAM LF (LAM P (P LF)))
+           ((LAM P P)
+            ((LAM X (LAM Y ((HIT X) Y))) ((LAM X (DEF X)) (LAM X (TARGET X))))))
+<     (TRIES)(TO HIT THE TARGET) := S\NP
+        : (((LAM LF (LAM P (P LF)))
+            ((LAM P P)
+             ((LAM X (LAM Y ((HIT X) Y)))
+              ((LAM X (DEF X)) (LAM X (TARGET X))))))
+           (LAM P (LAM X ((TRY (P X)) X))))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X ((TRY ((HIT (DEF (LAM X (TARGET X)))) X)) X)) =
+    (\ X . TRY (HIT (DEF (\ X . TARGET X)) X) X)
+
+Derivation 4
+--------------
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TARGET) := N
+        : (LAM X (TARGET X))
+>     (THE)(TARGET) := NP
+        : ((LAM X (DEF X)) (LAM X (TARGET X)))
+LEX   (TO) := VP/VP
+        : (LAM P P)
+LEX   (HIT) := VP/NP
+        : (LAM X (LAM Y ((HIT X) Y)))
+_G2_476 (THE TARGET) := VP\(VP/NP)
+        : ((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+<     (HIT)(THE TARGET) := VP
+        : (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+           (LAM X (LAM Y ((HIT X) Y))))
+>     (TO)(HIT THE TARGET) := VP
+        : ((LAM P P)
+           (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+            (LAM X (LAM Y ((HIT X) Y)))))
+LEX   (TRIES) := (S\NP)/VP
+        : (LAM P (LAM X ((TRY (P X)) X)))
+_G2_477 (TO HIT THE TARGET) := (S\NP)\((S\NP)/VP)
+        : ((LAM LF (LAM P (P LF)))
+           ((LAM P P)
+            (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+             (LAM X (LAM Y ((HIT X) Y))))))
+<     (TRIES)(TO HIT THE TARGET) := S\NP
+        : (((LAM LF (LAM P (P LF)))
+            ((LAM P P)
+             (((LAM LF (LAM P (P LF))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+              (LAM X (LAM Y ((HIT X) Y))))))
+           (LAM P (LAM X ((TRY (P X)) X))))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X ((TRY ((HIT (DEF (LAM X (TARGET X)))) X)) X)) =
+    (\ X . TRY (HIT (DEF (\ X . TARGET X)) X) X)
+
+Try (cky-pprint) to see the details including the features and slash modalities.
+    (cky-reveal-cell <cell>) to pretty-print the parse in <cell>.
+NIL
+> (lg "try-to")
+
+======================= l o a d i n g =======================================
+
+Project try-to file system (some optional, some system-generated)
+-----------------------------------------------------------------------------
+  CCG grammar source       : try-to.ccg
+          token form       : try-to.lisptokens
+  Compiled/loaded grammar  : try-to.ccg.lisp
+       *CCG-GRAMMAR*       : 5 entries
+   *LEX-RULES-TABLE*       : 0 entries
+=============================================================================
+T
+> (p '(tries to hit the target))
+
+T
+> (ders)
+
+
+Derivation 1
+--------------
+LEX   (TRIES) := (S\NP)/VP
+        : (LAM P (LAM X ((TRY (P X)) X)))
+LEX   (TO) := VP/VP
+        : (LAM P P)
+LEX   (HIT) := VP/NP
+        : (LAM X (LAM Y ((HIT X) Y)))
+LEX   (THE) := NP/*N
+        : (LAM X (DEF X))
+LEX   (TARGET) := N
+        : (LAM X (TARGET X))
+>     (THE)(TARGET) := NP
+        : ((LAM X (DEF X)) (LAM X (TARGET X)))
+>     (HIT)(THE TARGET) := VP
+        : ((LAM X (LAM Y ((HIT X) Y))) ((LAM X (DEF X)) (LAM X (TARGET X))))
+>     (TO)(HIT THE TARGET) := VP
+        : ((LAM P P)
+           ((LAM X (LAM Y ((HIT X) Y))) ((LAM X (DEF X)) (LAM X (TARGET X)))))
+>     (TRIES)(TO HIT THE TARGET) := S\NP
+        : ((LAM P (LAM X ((TRY (P X)) X)))
+           ((LAM P P)
+            ((LAM X (LAM Y ((HIT X) Y))) ((LAM X (DEF X)) (LAM X (TARGET X))))))
+
+Final LF, normal-order evaluated: 
+
+    (LAM X ((TRY ((HIT (DEF (LAM X (TARGET X)))) X)) X)) =
+    (\ X . TRY (HIT (DEF (\ X . TARGET X)) X) X)
+
+Try (cky-pprint) to see the details including the features and slash modalities.
+    (cky-reveal-cell <cell>) to pretty-print the parse in <cell>.
+NIL
+> (dribble)

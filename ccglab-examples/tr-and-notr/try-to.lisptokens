@@ -1,0 +1,7 @@
+(
+tries v  |:=|   |(| s |\\| np |[| agr |=| 3s |]|  |)|  |/| vp |[| typ |=| to |]|   |:|   |\\| p |\\| x |.| !try |(| p x |)| x |;| 
+to inf   |:=|  vp |[| typ |=| to |]|  |/| vp |[| typ |=| root |]|   |:|   |\\| p |.| p |;| 
+hit  v   |:=|  vp |[| typ |=| root |]|  |/| np  |:|   |\\| x |\\| y |.| !hit x y |;| 
+the  det  |:=|  np |/|  |*| n |:|   |\\| x |.| !def x |;| 
+target n  |:=|  n  |:|   |\\| x |.| !target x |;| 
+)
