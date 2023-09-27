@@ -79,7 +79,7 @@ is a collection of preliminary material (on lambda calculus and combinators), to
 papers and books about combinators, in language, planning, psychology and technology.
 
 <p>
-<b> LINKS</b>:
+<b> LAB</b>:
 <ol>       
 <li> We will use FOUR tools:
 
