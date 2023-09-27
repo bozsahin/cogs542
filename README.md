@@ -43,7 +43,7 @@ a summary of these developments.
 
 For mathematics, they manifest an analytic tool for studying foundations of representation.
 For computer science, they constitute one base for foundation of functional programing.
-In psychology, they can help us understand the idea of affordaces, one of the landmarks
+In psychology, they can help us understand the idea of affordances, one of the landmarks
 of ecological psychology. In cognitive science, they have been used to explore things like
 language of thought. In linguistics, they form the base of one linguistic theory.
 
