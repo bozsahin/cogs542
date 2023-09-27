@@ -1,12 +1,6 @@
 # cogs542
-METU COGS 542: Grammars, Combinators and Cognition (Fall 2021, covid-3 term;)
+METU COGS 542: Grammars, Combinators and Cognition (Fall 2023)
 
-<b> The course is now HYBRID. (%60 of official contact hours is face to face, i.e. 25 hours) 
-<a href="https://bozsahin.github.io/">Please read the flying banner here as potential student.</a> </b>
-
-Weekly flow of the course: 1) I put the week's lecture video up in youtube. 2) You watch it before our meeting (synch) point. We discuss the topics of
-the week, and questions. 3) We do Q&A-Discussion face to face, in a collectively determined date and time, for 2 hours max (because of C19)
-4) You do a short quiz on the week's topics, take home and solo work, 4) You present a paper related to combinators, which we record.
 
 <p><b>WHERE:</b> Middle East Technical University (METU/ODTU), Informatics Institute, Cognitive Science Department
 
@@ -18,21 +12,16 @@ the week, and questions. 3) We do Q&A-Discussion face to face, in a collectively
 <b>CATALOG DESCRIPTION: </b> Combinators and their syntax-semantics. Combinators and the lexicon. Morphology and grammar. Parsing and language acquisition. Syntactic analyses of various phenomena using combinators. Codeterminism in syntax and semantics. Combinators and serializable knowledge.
 
 <p>
-<b>LECTURER: </b> Cem Bozsahin (Fall 2021)
+<b>LECTURER: </b> Cem Bozsahin (Fall 2023)
        
-(no in-house lectures) phone: 210 7758 (better use my email for contact)
+phone: 210 7758 (better use my email for contact)
 
-Office hours: TBA
 
-Official Lecture hours:  Tuesdays 11.40-14.30 (max. 40 minutes per session). THIS IS SYNCH POINT FOR YOU TO FINISH WATCHING THE WEEK'S VIDEO.  
+Official Lecture hours:  Wednesdays 11.40-14.30 (room S03)
 
-Room for face to face meetings: S-03. Max pandemic capacity: 15 people. BRING HEAVY COATS. WE WILL OPEN ALL WINDOWS.
-
-<p><b>TA:</b>  Ecenur Cagirici.
+<p><b>TA:</b>  Rojda Ozcan
        
-<p><b>DISCUSSION</b>: face to face at Q&A, Online at synch points (required), offline in newsgroup (highly recommended, and used for deciding grades):
-       
-[group](https://groups.google.com/forum/#!forum/metu-cogs-542)
+<p><b>DISCUSSION</b>: [group](https://groups.google.com/forum/#!forum/metu-cogs-542)
 
 <p>
 <b>BACKGROUND REQUIREMENTS:</b> Basic understanding of formal languages, logic, automata and linguistics, at the level of COGS501 and COGS502. 
@@ -73,14 +62,17 @@ COURSE OUTLINE: </b>
 <b>REFERENCE MATERIAL: </b>
 
 There is a course reader in this repo. There is no textbook available for the material. The reader
-is a collection of preliminary material (on lambda calculus and combinators), tools (e.g. CCGlab), and important
+is a collection of preliminary material (on lambda calculus and combinators), tools, and important
 papers and books about combinators, in language, planning, psychology and technology.
 
 <p>
 <b> LINKS</b>:
 <ol>       
-<li> We will use <a href="https://github.com/bozsahin/ccglab">CCGlab</a>
-as the computational tool.
+<li> We will use TWO tools:
+
+One for CCG: <a href="https://github.com/bozsahin/ccglab">CCGlab</a>.
+
+One for Monadic Grammar: TBA
 </ol>
 
 <p>
