@@ -19,6 +19,8 @@ phone: 210 7758 (better use my email for contact)
 
 Official Lecture hours:  Wednesdays 11.40-14.30 (room S03)
 
+<p><b>LECTURE FORMAT</b>: Two hours of lecture, in class, no recording, one hour of quiz (either sit-in or take-home)
+
 <p><b>TA:</b>  Rojda Ozcan
        
 <p><b>DISCUSSION</b>: [group](https://groups.google.com/forum/#!forum/metu-cogs-542)
