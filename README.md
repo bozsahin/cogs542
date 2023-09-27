@@ -81,11 +81,16 @@ papers and books about combinators, in language, planning, psychology and techno
 <p>
 <b> LINKS</b>:
 <ol>       
-<li> We will use TWO tools:
+<li> We will use FOUR tools:
 
 One for CCG: <a href="https://github.com/bozsahin/ccglab">CCGlab</a>.
 
 One for Monadic Grammar: TBA
+
+One for language of thought: TBA
+
+One for mathematics: TBA
+
 </ol>
 
 <p>
