@@ -38,6 +38,17 @@ This course is intended as a course in computing track of Cognitive Science. It 
 <p><b>
 COURSE OUTLINE: </b>
 
+Combinators have made an impact on mathematics, computer science, psychology, cognitive science and linguistics. This course is
+a summary of these developments.
+
+For mathematics, they manifest an analytic tool for studying foundations of representation.
+For computer science, they constitute one base for foundation of functional programing.
+In psychology, they can help us understand the idea of affordaces, one of the landmarks
+of ecological psychology. In cognitive science, they have been used to explore things like
+language of thought. In linguistics, they form the base of one linguistic theory.
+
+We look at all these aspects.
+
 <ul> 
 <li>W1: Combinators and variable-free computing: What are combinators?
 <li> Combinators and language
