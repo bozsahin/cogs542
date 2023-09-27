@@ -96,5 +96,6 @@ One for mathematics: TBA
 <p>
 <b> NOTES:</b> In this repo.
        
-<p><b>COURSE CONDUCT: </b> 10 weeks of lecture and discussions. 4 weeks of research discussion including term presentations. Homework. Weekly quiz.
+<p><b>COURSE CONDUCT: </b> 10 weeks of lecture and discussions. 4 weeks of research discussion including term presentations. Lab work. Weekly quiz.
+Quizzes are paper and pencil. Lab work is use of a tool for a mini problem.
 <p><b>GRADING: </b>Mid-term exam 15%, final 15%, 1 lab work %10, presentation %15, 10 weekly quizzes (total %45, max. 9 counted).
