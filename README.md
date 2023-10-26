@@ -87,7 +87,7 @@ One for CCG: <a href="https://github.com/bozsahin/ccglab">CCGlab</a>.
 
 One for Monadic Grammar: TBA
 
-One for language of thought: TBA
+One for language of thought: <a href="https://github.com/piantado/pychuriso">pychuriso</a>.
 
 One for mathematics: TBA
 
