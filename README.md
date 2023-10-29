@@ -89,7 +89,7 @@ One for Monadic Grammar: TBA
 
 One for language of thought: <a href="https://github.com/piantado/pychuriso">pychuriso</a>.
 
-One for mathematics: TBA
+One for mathematics: <a href="http://lambda.jimpryor.net/code/lambda_evaluator/">Lambda and combinator evaluator</a>
 
 </ol>
 
