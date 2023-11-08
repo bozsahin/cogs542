@@ -85,7 +85,7 @@ papers and books about combinators, in language, planning, psychology and techno
 
 One for CCG: <a href="https://github.com/bozsahin/ccglab">CCGlab</a>.
 
-One for Monadic Grammar: TBA
+One for Monadic Grammar: <a href="https://github.com/bozsahin/thebench">TheBench</a>.
 
 One for language of thought: <a href="https://github.com/piantado/pychuriso">pychuriso</a>.
 
